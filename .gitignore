@@ -125,4 +125,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+*.MF
+
 # End of https://www.gitignore.io/api/java,windows,eclipse,java-web
