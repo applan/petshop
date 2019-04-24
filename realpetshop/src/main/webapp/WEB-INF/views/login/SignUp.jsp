@@ -12,8 +12,28 @@
 <script src="/resources/js/jquery.validate.js"></script>
 <script src="/resources/js/register.js"></script>
 </head>
-<body  style="background-color:#F5F5F5;">
-<div class="container" style="margin-top:40px">
+<style>
+	.container{
+		
+		margin-top:150px;
+		padding-left: 300px;
+		padding-right: 100px;
+	}
+	.signup{
+		padding-bottom: 30px;
+		padding-left: 130px;
+		color: black
+		;
+	}
+	
+
+</style>
+<body  style="background-color:white;">
+
+<div class="container" >
+<div>
+  	<img src="resources/img/logo.png" />
+  </div>
 <form id="regist" method="post">	
 	<div class="form-group row justify-content-center">
 		<label for="userid" class="col-sm-2 col-form-label">아이디</label>
@@ -39,8 +59,15 @@
 	<div class="form-group row justify-content-center">
 		<label for="name" class="col-sm-2 col-form-label">이름 </label>
 		<div class="col-sm-6">	
-			<input type="text" name="username" id="username" class="form-control" placeholder="이름을 입력하세요" "${jvo.name}"/>
+			<input type="text" name="username" id="username" class="form-control" placeholder="이름을 입력하세요" value="${jvo.name}"/>
 			<small id="username" class="text-info"></small>
+		</div>	
+	</div>
+	<div class="form-group row justify-content-center">
+		<label for="pass3" class="col-sm-2 col-form-label">주소</label>
+		<div class="col-sm-6">	
+			<input type="text" name="addr" id="addr" class="form-control" placeholder="주소를 입력하세요" value="${jvo.addr}"/>
+			<small id="addr" class="text-info"></small>
 		</div>	
 	</div>
 	<div class="form-group row justify-content-center">
@@ -58,13 +85,18 @@
 	<div class="form-group row justify-content-center">
 		<label for = "email" class="col-sm-2 col-form-label">이메일</label>
 		<div class="col-sm-6">	
-			<input type="email" name="email" id="email" class="form-control" placeholder="example@gmail.com" value = "${jvo.email}"/>	
+			<input type="email" name="email" id="email" class="form-control" placeholder="example@gmail.com" value = "${jvo.email}"/>
+			동의 <input type="checkbox" id="" name=""/>
+			비동의 <input type="checkbox" id="" name=""/>
+			<div>
+				<h6>동의시 이벤트 사항을 이메일로 보내줍니다.</h6>
+			</div>
 			<small id="email" class="text-info"></small>		
 		</div>	
 	</div>
-	<div class="form-group text-center">		
-		<button type="submit" class="btn btn-primary">입력</button>
-	    <button type="reset" class="btn btn-secondary">취소</button>		
+	<div class="form-group text-center" style="padding-right:230px;">		
+		<button type="submit" class="btn btn-primary" style="background-color: orange; border-color:orange;">입력</button>
+	    <button type="reset" class="btn btn-secondary" style="background-color: orange; border-color:orange; color:white;">취소</button>		
 	</div>		
 </form>
 </div>
