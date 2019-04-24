@@ -31,7 +31,9 @@
 <body  style="background-color:white;">
 
 <div class="container" >
-<h3 class="signup">민수네 펫샵 회원가입</h3>
+<div>
+  	<img src="resources/img/logo.png" />
+  </div>
 <form id="regist" method="post">	
 	<div class="form-group row justify-content-center">
 		<label for="userid" class="col-sm-2 col-form-label">아이디</label>
@@ -57,8 +59,15 @@
 	<div class="form-group row justify-content-center">
 		<label for="name" class="col-sm-2 col-form-label">이름 </label>
 		<div class="col-sm-6">	
-			<input type="text" name="username" id="username" class="form-control" placeholder="이름을 입력하세요" "${jvo.name}"/>
+			<input type="text" name="username" id="username" class="form-control" placeholder="이름을 입력하세요" value="${jvo.name}"/>
 			<small id="username" class="text-info"></small>
+		</div>	
+	</div>
+	<div class="form-group row justify-content-center">
+		<label for="pass3" class="col-sm-2 col-form-label">주소</label>
+		<div class="col-sm-6">	
+			<input type="text" name="addr" id="addr" class="form-control" placeholder="주소를 입력하세요" value="${jvo.addr}"/>
+			<small id="addr" class="text-info"></small>
 		</div>	
 	</div>
 	<div class="form-group row justify-content-center">
