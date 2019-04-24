@@ -1,73 +1,37 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Remember Bootstrap Theme Demo</title>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i' type='text/css' media='all' />
-    <link rel="stylesheet" href="https://bootstrapmade.com/demo/assets/css/normalize.css">
-    <link rel="stylesheet" href="https://bootstrapmade.com/demo/assets/css/fontello.css">
-    <link rel="stylesheet" href="https://bootstrapmade.com/demo/assets/css/style.css">
-</head>
-
-<body>
-    <header id="header">
-
-        <div class="logo">
-            <a href="https://bootstrapmade.com/"><img src="https://bootstrapmade.com/wp-content/themes/bmade/assets/img/logo.png" title="Back to BootstrapThemes.io Homepage" /></a>
-        </div>
-        <!--
-        <div class="info">
-            <a title="You are currently previewing the Remember Theme" href="https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/">Remember Theme</a>
-        </div>
-        -->
-        <div class="preview-devices">
-            <ul>
-                <li class="preview-test preview-devices-active" id="preview-test-desktop" title="Preview the  Remember Theme in Desktop Mode"><a href=""><i class="icon-desktop"></i></a></li>
-                 <!--<li class="preview-test" id="preview-test-tablet" title="Preview the  Remember Theme in Tablet Mode"><a href=""><i class="icon-tablet"></i></a></li>-->
-                <li class="preview-test" id="preview-test-mobile" title="Preview the  Remember Theme in Mobile Mode"><a href=""><i class="icon-mobile"></i></a></li>
-            </ul>
-        </div>
-
-        <div class="navigate">
-            <ul>
-                <!--<li class="navigate-like"><iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2FBootstrapMade&width=63&layout=button&action=like&size=large&show_faces=false&share=false&height=65&appId=163862247017518" width="63" height="28" style="border:none;overflow:hidden;float: left; padding-top: 7px;" scrolling="no" frameborder="0" allowTransparency="true"></iframe></li> -->
-                <li><a href="https://bootstrapmade.com/demo/themes/Remember/" target="_top" title="Hide the demo bar"><i class="icon-exit"></i></a></li>
-                <li><a href="https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/" title="Remember Theme Home Page"><i class="icon-home"></i></a></li>
-                <li><a class="download" href="https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/#download" title="Download the Remember Theme"><i class="icon-download"></i> <span>Free Download</span></a></li>
-                                    <li><a href="https://bootstrapmade.com/demo/Eterna/" title="Previous Theme: Eterna" target="_top"><i class="icon-left-arrow"></i></a></li>
-                
-                                    <li><a href="https://bootstrapmade.com/demo/Scaffold/" title="Next Theme: Scaffold" target="_top"><i class="icon-right-arrow"></i></a></li>
-                            </ul>
-        </div>
-
-    </header>
-
-    <div id="preview">
-        <iframe id="preview-frame" class="preview-desktop" src="https://bootstrapmade.com/demo/themes/Remember/" frameborder="0"></iframe>
-    </div>
-    <!--
-    <div class="social-share" title="Like &amp; Share the Remember Theme">
-        Like &amp; Share: &nbsp;
-        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2FBootstrapMade&width=63&layout=button&action=like&size=large&show_faces=false&share=false&height=65&appId=163862247017518" width="63" height="28" style="border:none;overflow:hidden;margin-bottom: -9px;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-        <a title="Share on Twitter" href="https://twitter.com/intent/tweet?url=https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/&text=Remember+Bootstrap+Theme&via=BootstrapMade" target="_blank"><i class="icon-twitter"></i></a>
-        <a title="Share on Facebook" href="https://www.facebook.com/sharer.php?u=https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/"  target="_blank"><i class="icon-facebook"></i></a>
-        <a title="Share on Pinterest" href="https://pinterest.com/pin/create/button/?url=https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/&media=https://bootstrapmade.com/wp-content/themefiles/Remember/800.png"  target="_blank"><i class="icon-pinterest-circled"></i></a>
-        <a title="Share on Google Plus" href="https://plus.google.com/share?url=https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/" target="_blank"><i class="icon-gplus"></i></a>
-        <i class="icon-cancel-circled" title="Close the sharing bar"></i>
-    </div>
-    -->
-    <script src="https://bootstrapmade.com/demo/assets/js/jquery-3.1.0.min.js"></script>
-    <script src="https://bootstrapmade.com/demo/assets/js/custom.js"></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-55234356-4', 'auto');
-        ga('send', 'pageview');
-    </script>
-</body>
-</html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@include file="includes/header.jsp" %>
+<link rel="stylesheet" href="/resources/css/style.css" />
+<!-- 이벤트 슬라이드 -->
+<div class="container">
+	<div class="row">
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		  <ol class="carousel-indicators">
+		    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		  </ol>
+		  	<div class="carousel-inner">
+			    <div class="carousel-item active">
+			      <img class="d-block w-100" src="https://wifiexpress.co.kr/wp/wp-content/uploads/2013/05/2018-%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A5%E1%86%AF-%E1%84%8B%E1%85%B5%E1%84%87%E1%85%A6%E1%86%AB%E1%84%90%E1%85%B3-%E1%84%87%E1%85%A2%E1%84%82%E1%85%A5-9%E1%84%8B%E1%85%AF%E1%86%AF.jpg" alt="First slide">
+			    </div>
+			    <div class="carousel-item">
+			      <img class="d-block w-100" src="https://wifiexpress.co.kr/wp/wp-content/uploads/2013/05/2018-%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A5%E1%86%AF-%E1%84%8B%E1%85%B5%E1%84%87%E1%85%A6%E1%86%AB%E1%84%90%E1%85%B3-%E1%84%87%E1%85%A2%E1%84%82%E1%85%A5-5%E1%84%8B%E1%85%AF%E1%86%AF-2.png" alt="Second slide">
+			    </div>
+			    <div class="carousel-item">
+			      <img class="d-block w-100" src="https://wifiexpress.co.kr/wp/wp-content/uploads/2013/05/2018-%E1%84%91%E1%85%A7%E1%86%BC%E1%84%8E%E1%85%A1%E1%86%BC-%E1%84%8B%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%86%B7%E1%84%91%E1%85%B5%E1%86%A8-%E1%84%8B%E1%85%B5%E1%84%87%E1%85%A6%E1%86%AB%E1%84%90%E1%85%B3-%E1%84%87%E1%85%A2%E1%84%82%E1%85%A5.jpg" alt="Third slide">
+			    </div>
+		  	</div>
+		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
+	</div>
+</div>
+<%@include file="includes/footer.jsp" %>
