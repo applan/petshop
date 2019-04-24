@@ -1,11 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>회원가입</title>
+<%@include file="../includes/header.jsp" %>
+
 <link rel = "stylesheet" href = "/resources/css/gd_common.css" />
 <link rel = "stylesheet" href = "/resources/css/gd_content.css" />
 <link rel = "stylesheet" href = "/resources/css/gd_custom.css" />
@@ -13,22 +9,15 @@
 <link rel = "stylesheet" href = "/resources/css/gd_item-display.css" />
 <link rel = "stylesheet" href = "/resources/css/gd_layout.css" />
 <link rel = "stylesheet" href = "/resources/css/gd_layout.css" />
- <link rel = "stylesheet" href = "/resources/css/gd_share.css" />
+<link rel = "stylesheet" href = "/resources/css/gd_share.css" />
 
-<!-- resources 앞에 / 를 붙일때는 context path가 없는 경우일 때 -->
-<link rel="stylesheet" href="/resources/css/bootstrap.min.css">
-<script src="/resources/js/jquery-3.3.1.js"></script>
-<script src="/resources/js/jquery.validate.js"></script>
-<script src="/resources/js/register.js"></script>
-</head>
 <div id="container">
-
-
         <!-- 본문 시작 : start -->
         <div id="content">
 
 <div class="member">
-    <h2>아이디찾기</h2>
+	<img src="/resources/img/logo.png" style="width: 300px; margin-left: 130px;" />
+
 
     <form id="formFindId" method="post" action="../member/member_ps.php" novalidate="novalidate">
         <div class="box">
@@ -38,21 +27,21 @@
                 <div class="login">
                     <div class="input-info">
                         <div>
-                            <input type="text" class="text" id="userName" name="userName">
+                            <input type="text" class="text" id="userName" name="userName" placeholder="이름">
                         </div>
-                            <label for="userName">이름</label>
+                            <!-- <label for="userName">이름</label> -->
                         <div>
                             <input type="text" class="text" id="userEmail" name="userEmail" placeholder="가입메일주소">
                         </div>
-                            <label for="userEmail">이메일</label>
+<!--                             <label for="userEmail"></label> -->
                     </div>
                     <button type="submit" class="skinbtn point2 fi-id"><em>아이디 찾기</em></button>
                 </div>
                 <p class="dn caution-msg1">일치하는 회원정보가 없습니다. 다시 입력해 주세요.</p>
             </div>
             <div class="btn">
-                <button class="skinbtn default fi-pw find-id btn-find-password"><em>비밀번호 찾기</em></button>
-                <button class="skinbtn default fi-login find-id btn-login"><em>로그인하기</em></button>
+                <button class="skinbtn default fi-pw find-id btn-find-password" style="background-color: red; border-color: red; color:white;"><em>비밀번호 찾기</em></button>
+                <button class="skinbtn default fi-login find-id btn-login" style="background-color: red; border-color: red; color:white;"><em>로그인하기</em></button>
             </div>
         </div>
     </form>
@@ -121,4 +110,5 @@
 </div>
         <!-- 본문 끝 : end -->
 
-    </div>
+</div>
+<%@include file="../includes/footer.jsp" %>
