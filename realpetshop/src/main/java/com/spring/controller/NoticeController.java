@@ -19,5 +19,7 @@ public class NoticeController {
 	public String notice() {
 		log.info("notice page 호출...");
 		return "/notice/notice";
+		
+		
 	}
 }
