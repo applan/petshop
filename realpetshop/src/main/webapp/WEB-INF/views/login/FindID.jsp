@@ -36,11 +36,11 @@
                         </div>
 
                     </div>
-                    <button type="submit" class="skinbtn point2 fi-id" ><em>아이디 찾기</em></button>
+                    <button type="submit" class="skinbtn point2 fi-id" style="height:103px;"><em>아이디 찾기</em></button>
                 </div>
                 <p class="dn caution-msg1">일치하는 회원정보가 없습니다. 다시 입력해 주세요.</p>
             </div>
-            <div class="btn">
+            <div class="btn" style="border-left-width: 90px;">
                 <button type="button" class="skinbtn default fi-pw find-id btn-find-password" id="pwd"
                 onclick = "location.href = 'PasswordRelivalance'"
                 style="background-color: red; border-color: red; color:white;"><em>비밀번호 찾기</em></button>
