@@ -37,7 +37,7 @@
                 </button>
                 <a class="navbar-brand" href="/board/list">Pet Shop-Admin Page</a>
             </div>
-            </div>
+            
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
@@ -134,37 +134,27 @@
                 <!-- /.dropdown -->
             </ul>
             <!-- /.navbar-top-links -->
-
+</div>
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                            </div>
-                            <!-- /input-group -->
-                        </li>
+                        
                         <li>
                             <a href="/"><i class="fa fa-fw "><img src="resources/img/foot.png" class="im" /></i>  회원 정보 수정 </a>
                             
                         </li>
                         <li>
-                            <a href="/"><i class="fa fa-fw im"><img src="resources/img/foot_2.png" class="im"/></i>  공지사항 등록  </a>
+                            <a href="/"><i class="fa fa-fw"><img src="resources/img/foot_2.png" class="im"/></i>  신상품 광고  </a>
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="/"><i class="fa fa-fw im"><img src="resources/img/foot_3.png" class="im"/></i> 상품 정보 삭제 </a>
+                            <a href="/"><i class="fa fa-fw "><img src="resources/img/foot_3.png" class="im"/></i> 상품 정보 삭제 </a>
                         </li>
                         <li>
-                            <a href="/"><i class="fa fa-fw im"><img src="resources/img/foot_4.png" class="im"/></i> 상품 등록 </a>
+                            <a href="/"><i class="fa fa-fw "><img src="resources/img/foot_4.png" class="im"/></i> 상품 등록 </a>
                         </li>
                         <li>
-                            <a href="/"><i class="fa fa-fw im"><img src="resources/img/foot.png" class="im"/></i> UI Elements</a>
+                            <a href="/"><i class="fa fa-fw "><img src="resources/img/foot.png" class="im"/></i> UI Elements</a>
                             <!-- /.nav-second-level -->
                             
                         </li>
@@ -173,6 +163,6 @@
                 <!-- /.sidebar-collapse -->
             </div>
             <!-- /.navbar-static-side -->
-        </nav>
+        
         <div id="page-wrapper">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

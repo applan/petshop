@@ -23,24 +23,9 @@
 </head>
 <body>
 
-<!-- Header / navbar ì¬ì´í¸ ê³ì ë°ë¼ë¤ëë ë¶ë¶ -->
-<header>
+
 
 <!-- ë¡ê·¸ì¸/íìê°ì/ì¥ë°êµ¬ë/ì»¤ë®¤ëí° -->
-	<nav class="navbar navbar-expand-sm">
-	  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-	  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button> -->
-	  
-	  <!-- logo -->
-<!-- 	<div class="logo">
-	    <ul>
-	       <li><a href="#" title=""><img src="resources/img/facebook.png"/></a></li>
-	       <li><a href="#" title=""><img src="resources/img/instagram.png"/></a></li>
-	       <li><a href="#" title=""><img src="resources/img/twitter.png"/></a></li>
-	    </ul>
-	</div> -->
 
 <!-- Header -->
 <header id="header">
@@ -151,11 +136,7 @@
 
 	  
 <!-- ê²ìì°½ -->
-	<!-- <!-- <form class="form-inline my-2 my-lg-0 ">
-      	<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-     	<button class="btn btn-primary btn-my-2 round my-2 my-sm-0" type="submit">Search</button>
-   	</form> -->
-	</nav> -->
+
 
 <!-- search -->
    	<div class="search-box">

@@ -1,12 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@include file="../includes/header_admin.jsp" %>
-<style>
- .ta{
-  height: 
- }
-</style>
 
+<div>
+<h1>회원 관리</h1>
 <table class="table ta">
   <thead class="thead-dark">
     <tr>
@@ -37,5 +34,5 @@
     </tr>
   </tbody>
 </table>
-
+</div>
 <%@include file="../includes/footer_admin.jsp" %>
