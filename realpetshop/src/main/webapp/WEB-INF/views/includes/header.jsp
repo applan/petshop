@@ -1,41 +1,30 @@
-<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-=======
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 
->>>>>>> refs/remotes/origin/master
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<<<<<<< HEAD
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="/resources/css/style.css" />
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="resources/css/style.css" />
 
 
->>>>>>> refs/remotes/origin/master
 <title>Pet Shop</title>
 
 </head>
 <body>
 <!-- Header -->
 <header id="header">
-	<div class="header">
+	<!-- <div class="header">
 	  	<img src="resources/img/logo.png" alt="" />
-	</div>
-<<<<<<< HEAD
+	</div> -->
 <!-- topbar -->
     <div id="topbar">
     <div class="container">
       <div class="row">
+      
         <div class="col-sm-6">
           <div class="contactinfo">
               <a href="#"><i class="fa fa-phone" id="ph"></i>+2 95 01 88 821</a>
@@ -68,7 +57,6 @@
     </div>
   </div>
     
-=======
 	  <div class="collapse navbar-collapse" id="navbarNav">
 	    <ul class="navbar-nav">
 
@@ -101,8 +89,6 @@
 	      </li>
 	    </ul>
 	  </div>
-	</nav>
->>>>>>> refs/remotes/origin/master
 	
 <!-- navbar -->
 	<nav class="navbar navbar-expand-lg">
@@ -111,7 +97,6 @@
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
 	  
-<<<<<<< HEAD
 <!--  -->
 	<div class="pet">
 		  <div class="collapse navbar-collapse">
@@ -136,21 +121,13 @@
 	  </div>
 	  
 <!-- search -->
-	
    	<div class="search-box">
    		<input class="search-txt" type="text" id="search" placeholder="Search . . ."/>
    		<a href="#" class="search-btn">
    			<i class="fa fa-search"></i>
    		</a>
    	</div>
-=======
-<!-- 검색창 -->
-	<form class="form-inline my-2 my-lg-0 ">
-      	<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-     	<button class="btn btn-primary btn-my-2 round my-2 my-sm-0" type="submit">Search</button>
-   	</form>
->>>>>>> refs/remotes/origin/master
-	</nav>
+   	</nav>
 	
 </header>
 
