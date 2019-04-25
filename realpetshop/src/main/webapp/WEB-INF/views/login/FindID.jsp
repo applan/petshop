@@ -4,12 +4,6 @@
 
 <link rel = "stylesheet" href = "/resources/css/gd_common.css" />
 <link rel = "stylesheet" href = "/resources/css/gd_content.css" />
-<link rel = "stylesheet" href = "/resources/css/gd_custom.css" />
-<link rel = "stylesheet" href = "/resources/css/gd_goods-view.css" />
-<link rel = "stylesheet" href = "/resources/css/gd_item-display.css" />
-<link rel = "stylesheet" href = "/resources/css/gd_layout.css" />
-<link rel = "stylesheet" href = "/resources/css/gd_layout.css" />
-<link rel = "stylesheet" href = "/resources/css/gd_share.css" />
 
 <div id="container">
         <!-- 본문 시작 : start -->
@@ -24,18 +18,20 @@
             <div id="divFindId">
                 <h3>회원 아이디찾기</h3>
 
-                <div class="login">
+                <div class="login" style="padding-bottom: 20px;">
                     <div class="input-info">
                     
    
 							
-                        <div>
+                        <div >
+ 
                             <input type="text" class="text" id="username" name="username" class="form-control" placeholder="이름">
                             <small id="username" class="text-info"></small>
                         </div>
-
-                        <div>
-                            <input type="text" class="text" id="email" name="email" class="form-control"placeholder="가입메일주소">
+		<br/>
+                        <div >
+                  
+                             <input type="text" class="text" id="email" name="email" class="form-control"placeholder="가입메일주소">
                             <small id="email" class="text-info"></small>
                         </div>
 
