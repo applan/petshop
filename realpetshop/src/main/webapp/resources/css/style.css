@@ -1,25 +1,28 @@
-/* 기본 폰트 지정 */
-*
-{
-	font-family: 'Poppins', sans-serif;
+body {	
+	line-height: 1.2;
+    font-family: 'Roboto',sans-serif;
+    margin: 0;
 }
 /* 페이지 한 눈에 보기 쉽게 양 옆 빈 칸 조정 */
-body
-{
-}
+body{
+
+	}
 
 /*/////////////////////Header/////////////////////// */
+.header img
+{
+    margin: -15px 0 -20px 15px;
+    height: 200px;
+
+}
 .navbar-expand-lg
 {
 	background-color: #FCE4BD;
+	padding: 20px;
 }
-.navbar-brand img
+.carousel-inner 
 {
-	margin-top: -25px;
-    margin-bottom: -35px;
-    margin-left: 7px;
-    height: 105px;
-
+    margin-top: 30px;
 }
 .navbar-nav
 {
@@ -28,12 +31,13 @@ body
 }
 ul
 {
-	font-family: 'Poppins', regular;
+	font-family: 'Roboto', regular;
 	font-size:
 }
 a {
-    color: #000;
+    color: #212529 !important;
     text-decoration: none;
+    background-color: transparent;
 }
 a:hover
 {
@@ -43,15 +47,63 @@ a:hover
 .collapse
 {	
 	margin-left: 15px;
-	margin-top: -8px;
-	margin-bottom: -30px;
+    margin-top: -8px;
+    margin-bottom: -13px;
 }
 /* 검색창 */
-.form-inline
+/* .form-inline
 {
 	margin: 0 auto;
 	
+} */
+.search-box
+{
+	position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(0%,-50%);
+    background: #DE6868;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
 }
+.search-box:hover>.search-txt
+{
+	width: 240px;
+	padding: 0 6px;
+}
+.search-box:hover>.search-btn
+{
+	background: #DE6868;
+}
+
+.search-btn
+{
+	color: #FCE4BD!important;
+	float: right;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #DE6868;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.4s;
+}
+.search-txt
+{
+	border: none;
+	background: none;
+	outline: none;
+	float: left;
+	padding: 0;
+	color: white;
+	font-size: 16px;
+	transition: 0.4s;
+	line-height: 20px;
+	width: 0px;
+}
+
 .logo>ul
 {
 	list-style: none;
@@ -67,17 +119,144 @@ a:hover
     border : 0;
     float: left;
 }
-.logo img
+.social-links
 {
-    margin-top: -8px;
-	margin-left: 5px;
-    width: 30px;
-    height: 30px;
+    margin-top: 5px;
+    margin-bottom: -5px;
+	margin-left: 2px;
 }
-.logo
+/* 소셜미디어메뉴 */
+#topbar .social-links 
 {
-	margin-top: -13px;
+    text-align: left;
+}
+#topbar 
+{
+	background: none repeat scroll 0 0 #F0F0E9;
+    padding: 10px 0 10px 0;
+    transition: all 0.5s;
+}
+#topbar .social-links a 
+{
+    color: #535074;
+    padding: 4px 12px;
+    display: inline-block;
+    line-height: 1px;
+}
+.social-links a  
+{
+    color: #1bb1dc;
+    transition: 0.5s;
+}
+.contactinfo a
+{
+	margin: 0px 5px 0 5px;
+}
+.contactinfo fa-envelope
+{
+	margin-left: 10px;
+}
+a:hover
+{
+    text-decoration: none;
+}
+.lo, .jo, .ca, .ev, .no, #ph, #en{
+    margin: 0 10px 0 5px;
+}
+#fa
+{
+	padding-top: 1px;
+}
+.facebook, .twitter, .instagram, .google-plus
+{
+	margin: 0 10px 0 5px;
+}
+.login, .social-icons
+{
+	display: flex;
+	justify-content: flex-end;
 }
 
+/*///////////////////////////////////// footer //////////////////////////////////////*/
+
+
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css);
+
+/* .hm-gradient {
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+} */
+.darken-grey-text 
+{
+    color: #2E2E2E;
+}
+footer.page-footer 
+{
+	background-color: #FCE4BD!important;
+    margin-top: 20px;
+    padding-top: 20px;
+    color: #DE6868;
+    height: 180px;
+}
+footer.page-footer .call-to-action 
+{
+    text-align: center;
+    padding-top: 1.3rem;
+    padding-bottom: .5rem;
+}
+footer.page-footer ul, ul.instagram-photos 
+{
+    list-style-type: none;
+    padding: 0;
+}
+.divider-new, body, h1, h2, h3, h4, h5, h6 
+{
+    font-weight: 300;
+}
+#footer {
+    position: relative;
+    margin-bottom: 0px;
+    padding: 0;
+    overflow: hidden;
+    
+}
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+footer.page-footer .footer-copyright 
+{
+    overflow: hidden;
+    height: 50px;
+    line-height: 50px;
+    color: rgba(255,255,255,.6);
+    background-color: rgba(0,0,0,.2);
+    text-align: center;
+    font-size: .9rem;
+}
+
+/*////////////////////////////////// Popular ///////////////////////////////////////*/
+
+.bd-example 
+{
+	text-align: center;
+	position: relative;
+    padding: 2rem;
+    border-width: .2rem;
+    
+}
+
+
+/*///////////////////////////////////////////////////////////////*/
+
+.pet
+{
+	text-align: center;
+	margin-right: 50px;
+}
 
 

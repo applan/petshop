@@ -1,16 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@include file="../includes/header.jsp" %>
-<<<<<<< HEAD
-=======
 
->>>>>>> refs/remotes/origin/master
 <div class="row" style="padding-left: 700px;">
   <div class="text-center"><!--  style="padding-left: 250px;" -->
     <form class="form-signin" style="margin-left: 100px; margin-top: 70px;">
   <div>
   <div class="img-class">
-  	<a href="adminLogin"><img src="resources/img/logo.png" style="width:300px;"/></a>
+  	<img src="resources/img/logo.png" style="width:300px;"/>
   	</div>
   </div>
   <h1 class="h3 mb-3 font-weight-normal" >로그인</h1>
@@ -23,7 +20,7 @@
       <input type="checkbox" value="remember-me"> Remember me
     </label>
   </div>
-  <button class="btn btn-lg btn-primary btn-block" type="submit" style="background-color:red; border-color:red;" >구매자 로그인</button>
+  <button class="btn btn-lg btn-primary btn-block" type="submit" style="background-color:red; border-color:red;" >관리자 로그인</button>
 	<div>
 		<h1> </h1>
 	</div>
@@ -41,6 +38,5 @@
 </form>
 </div>
 </div>
-
 
 <%@include file="../includes/footer.jsp" %>
