@@ -28,5 +28,10 @@ public class HomeController {
 	public void view() {
 		log.info("main page 호출...");
 	}
+	@GetMapping("/search")
+	public String search() {
+		log.info("검색 화면 호출");
+		return "search/search";
+	}
 	
 }
