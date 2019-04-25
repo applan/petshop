@@ -17,18 +17,27 @@
         <!-- 본문 시작 : start -->
         <div id="content">
 <img src="resources/img/logo.png" style="width:300px; margin-left: 350px; margin-top: 50px; " />
-<div class="member find-pw-page">
+<div class="member find-pw-page" style="padding-left: 30px; padding-top: 0px;">
     <h2>비밀번호 찾기</h2>
 
     <div class="box">
-        <form name="formFind" id="formFind" action="../member/user_certification.php" method="post" novalidate="novalidate">
+        <form name="formFind" id="formFind" action="" method="post" novalidate="novalidate">
             <fieldset>
 
-                <h3>아이디 입력</h3>
+                <h3>아이디, 이메일 입력</h3>
 
-                <p class="guide" style="font-size: small;">비밀번호를 찾고자 하는 아이디를 입력해 주세요.</p>
+                <p class="guide" style="font-size: small;">비밀번호를 찾고자 하는 아이디, 이메일을 입력해 주세요.</p>
 
-                <div class="find-pw">
+                
+                <div class="find-pw" style="padding:0px; border-top: 0px;">
+                    <div class="input-id">
+                        <div class="txt-field">
+                            <input type="email" id="email" name="email" class="text" placeholder="이메일">
+                        </div>
+                        <p class="dn" id="errorMessage"></p>
+                    </div>
+                </div>
+                <div class="find-pw" style="padding:0px; border-top: 0px;">
                     <div class="input-id">
                         <div class="txt-field">
                             <input type="text" id="memberId" name="memberId" class="text" placeholder="아이디">
@@ -37,15 +46,20 @@
                         <p class="dn" id="errorMessage"></p>
                     </div>
                 </div>
+                <div class="btn" style="padding-left: 50px; margin-top: 0px;">
                 <div class="btn">
-                    <button class="skinbtn base3 fp-next" type="submit"><em>다음</em></button>
+                    <button class="skinbtn base3 fp-next" type="button" onclick="location.href='#'" style="background-color: red; border-color: red;"><em>비밀번호 찾기</em></button>
+                </div>
+                <div class="btn">
+                    <button class="skinbtn base3 fp-next" type="button" onclick="location.href='login1'" style="background-color: red; border-color: red;"><em>로그인 하러가기</em></button>
+                </div>
                 </div>
             </fieldset>
         </form>
     </div>
 </div>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     $(document).ready(function () {
         $('input').keyup(function () {
             $('#errorMessage', 'form').addClass('dn');
@@ -88,7 +102,7 @@
             }
         });
     });
-</script>
+</script> -->
 </div>
 </div>
 <%@include file="../includes/footer.jsp" %>

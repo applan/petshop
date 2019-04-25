@@ -14,7 +14,7 @@ BootPay.request({
 	application_id: "5cbecf7a396fa65278e54256",
 	name: '개 사료', //결제창에서 보여질 이름
 	pg: 'danal',
-	method: 'card_rebill', 
+	method: 'card_rebill', // 빌링키를 받기 위한 결제 수단
 	show_agree_window: 0, // 부트페이 정보 동의 창 보이기 여부
 	items: [
 		{
