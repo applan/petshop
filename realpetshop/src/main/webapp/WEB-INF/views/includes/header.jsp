@@ -1,31 +1,18 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> refs/remotes/origin/master
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<<<<<<< HEAD
 
-=======
->>>>>>> refs/remotes/origin/master
 
 <!DOCTYPE html>
 <html>
 <head>
-<<<<<<< HEAD
+
 <meta charset="UTF-8">
 
-=======
-<meta charset="UTF-8">
->>>>>>> refs/remotes/origin/master
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="resources/css/style.css" />
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/master
 
 <title>Pet Shop</title>
 
@@ -35,11 +22,10 @@
 <header id="header">
 	<!-- <div class="header">
 	  	<img src="resources/img/logo.png" alt="" />
-<<<<<<< HEAD
+
 	</div>
 =======
 	</div> -->
->>>>>>> refs/remotes/origin/master
 <!-- topbar -->
     <div id="topbar">
     <div class="container">
@@ -108,24 +94,24 @@
 	        <a class="nav-link" href="#">Notice</a>
 	      </li>
 	    </ul>
-<<<<<<< HEAD
+
 	  </div>
 	</nav>
-=======
+
 	  </div>
->>>>>>> refs/remotes/origin/master
+
 	
 <!-- navbar -->
 	<nav class="navbar navbar-expand-lg">
 	  <a class="navbar-brand" href="#"></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
-<<<<<<< HEAD
+
 	  </button>
-=======
+
 	  </button>
 	  
->>>>>>> refs/remotes/origin/master
+
 <!--  -->
 	<div class="pet">
 		  <div class="collapse navbar-collapse">
@@ -155,13 +141,13 @@
    		<a href="#" class="search-btn">
    			<i class="fa fa-search"></i>
    		</a>
-<<<<<<< HEAD
+
    	</div>
 	</nav>
-=======
+
    	</div>
    	</nav>
->>>>>>> refs/remotes/origin/master
+
 	
 </header>
 
