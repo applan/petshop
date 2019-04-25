@@ -1,8 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="resources/css/style.css" />
@@ -10,10 +11,10 @@
 
 </head>
 <body>
-<!-- Header / navbar 사이트 계속 따라다니는 부분 -->
+<!-- Header / navbar ì¬ì´í¸ ê³ì ë°ë¼ë¤ëë ë¶ë¶ -->
 <header>
 
-<!-- 로그인/회원가입/장바구니/커뮤니티 -->
+<!-- ë¡ê·¸ì¸/íìê°ì/ì¥ë°êµ¬ë/ì»¤ë®¤ëí° -->
 	<nav class="navbar navbar-expand-sm">
 	  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,7 +57,7 @@
 	  </button>
 	  
 	  
-<!-- 검색창 -->
+<!-- ê²ìì°½ -->
 	<form class="form-inline my-2 my-lg-0 ">
       	<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
      	<button class="btn btn-primary btn-my-2 round my-2 my-sm-0" type="submit">Search</button>
