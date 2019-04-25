@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@include file="../includes/header.jsp" %>
-s
 <div class="row" style="padding-left: 700px;">
   <div class="text-center"><!--  style="padding-left: 250px;" -->
     <form class="form-signin" style="margin-left: 100px; margin-top: 70px;">
