@@ -35,4 +35,22 @@ public class LoginController {
 		return "login/SignUp";
 	}
 	
+	@GetMapping("/SellerLogin")
+	public String sellerlogin() {
+		
+		return "login/SellerLogin";
+	}
+	
+	@GetMapping("/adminLogin")
+	public String adminlogin() {
+		log.info("관리자");
+		return "login/adminLogin";
+	}
+	
+	@GetMapping("/EditPersonalInformation")
+	public String EditPersonalInformation() {
+		log.info("개인정보수정");
+		return "login/EditPersonalInformation";
+	}
+	
 }

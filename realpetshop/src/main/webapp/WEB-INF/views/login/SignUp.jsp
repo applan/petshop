@@ -4,10 +4,9 @@
 
 
 
-<script src="/resources/js/jquery-3.3.1.js"></script>
-<script src="/resources/js/jquery.validate.js"></script>
-<script src="/resources/js/register.js"></script>
-</head>
+
+
+
 
 <div style="background-color:white;">
 
@@ -69,13 +68,14 @@
 			동의 <input type="checkbox" id="" name=""/>
 			비동의 <input type="checkbox" id="" name=""/>
 			<div>
+				<p></p>
 				<h6>동의시 이벤트 사항을 이메일로 보내줍니다.</h6>
 			</div>
 			<small id="email" class="text-info"></small>		
 		</div>	
 	
 	</div>
-	<div class="form-group text-center" style="padding-right:230px;">		
+	<div class="form-group text-center" style="padding-right:50px; padding-top: 5px;]">		
 		<button type="submit" class="btn btn-primary" style="background-color: red; border-color:red;">입력</button>
 	    <button type="reset" class="btn btn-secondary" style="background-color: red; border-color:red; color:white;">취소</button>		
 	</div>
@@ -84,3 +84,5 @@
 </div>
 </div>
 <%@include file="../includes/footer.jsp" %>
+<script src="/resources/js/jquery.validate.js"></script>
+<script src="/resources/js/signup.js"></script>
