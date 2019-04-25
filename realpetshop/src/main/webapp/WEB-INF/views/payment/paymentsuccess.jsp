@@ -35,10 +35,10 @@
         user-select: none;
       }
       .vi2 table{
-        margin: auto 20%; 
-        
-        
+        margin: auto 20%;
+        width:65%;
       }
+      
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -63,7 +63,7 @@
     <h2>이용해주셔서 대단히 감사합니다</h2>
 <table border="1px solid" class="ta">
 	<tr align="center">
-		<th>상품명</th>
+		<th class="pn">상품명</th>
 		<th>이용 기간</th>
 		<th>결제 수단</th>
 		<th>결제 결과</th>
