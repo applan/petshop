@@ -22,16 +22,16 @@
                                 <hr class="clearfix w-100 d-md-none">
 
                                 <!--Second column-->
-                                <div class="col-md-2 mx-auto" style="margin-left: 30px!important; margin-right: 0px!important;">
+                                <!-- <div class="col-md-2 mx-auto" style="margin-left: 30px!important; margin-right: 0px!important;">
                                     <h5 class="title mb-4 mt-3 font-bold">LINKS</h5>
                                     <ul>
-                                    <!-- 옆에 아이콘 추가하기 -->
+                                    옆에 아이콘 추가하기
                                         <li><a href="#!">Home</a></li>
                                         <li><a href="#!">Event</a></li>
                                         <li><a href="#!">Notice</a></li>
                                         <li><a href="#!">Q&A</a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                                 <!--/.Second column-->
 
                                 <hr class="clearfix w-100 d-md-none">
