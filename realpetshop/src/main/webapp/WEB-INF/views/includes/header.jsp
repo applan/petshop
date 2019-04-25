@@ -1,22 +1,19 @@
-<<<<<<< HEAD
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-=======
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
->>>>>>> refs/remotes/origin/master
 <!DOCTYPE html>
 <html>
 <head>
-<<<<<<< HEAD
+
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-=======
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
->>>>>>> refs/remotes/origin/master
+
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="resources/css/style.css" />
 
@@ -25,30 +22,31 @@
 
 </head>
 <body>
-<<<<<<< HEAD
+
 <!-- Header / navbar ì¬ì´í¸ ê³ì ë°ë¼ë¤ëë ë¶ë¶ -->
 <header>
 
 <!-- ë¡ê·¸ì¸/íìê°ì/ì¥ë°êµ¬ë/ì»¤ë®¤ëí° -->
 	<nav class="navbar navbar-expand-sm">
 	  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
-	  </button>
+	  </button> -->
+	  
 	  <!-- logo -->
-	<div class="logo">
+<!-- 	<div class="logo">
 	    <ul>
 	       <li><a href="#" title=""><img src="resources/img/facebook.png"/></a></li>
 	       <li><a href="#" title=""><img src="resources/img/instagram.png"/></a></li>
 	       <li><a href="#" title=""><img src="resources/img/twitter.png"/></a></li>
 	    </ul>
-	</div>
-=======
+	</div> -->
+
 <!-- Header -->
 <header id="header">
-	<!-- <div class="header">
+	 <div class="header">
 	  	<img src="resources/img/logo.png" alt="" />
-	</div> -->
+	</div> 
 <!-- topbar -->
     <div id="topbar">
     <div class="container">
@@ -86,13 +84,13 @@
     </div>
   </div>
     
->>>>>>> refs/remotes/origin/master
+
 	  <div class="collapse navbar-collapse" id="navbarNav">
 	    <ul class="navbar-nav">
 
-	      <!-- <li class="nav-item active">
+	       <li class="nav-item active">
 	        <a class="nav-link" href="../login1">Login<span class="sr-only">(current)</span></a>
-	      </li> -->
+	      </li> 
 	      <!-- 충동해결 -->
 	      <li>
 	      	<select name="loginselect" onchange="window.open(value,'_self')">
@@ -150,15 +148,15 @@
 		  </div>
 	  </div>
 	  
-<<<<<<< HEAD
+
 	  
 <!-- ê²ìì°½ -->
-	<form class="form-inline my-2 my-lg-0 ">
+	<!-- <!-- <form class="form-inline my-2 my-lg-0 ">
       	<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
      	<button class="btn btn-primary btn-my-2 round my-2 my-sm-0" type="submit">Search</button>
-   	</form>
-	</nav>
-=======
+   	</form> -->
+	</nav> -->
+
 <!-- search -->
    	<div class="search-box">
    		<input class="search-txt" type="text" id="search" placeholder="Search . . ."/>
@@ -167,7 +165,7 @@
    		</a>
    	</div>
    	</nav>
->>>>>>> refs/remotes/origin/master
+
 	
 </header>
 

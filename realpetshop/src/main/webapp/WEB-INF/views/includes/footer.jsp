@@ -59,16 +59,16 @@
 
                             </div>
                         </div>
-                        <!--/.Footer Links-->
                         
-                        <!--Copyright-->
-                        <!-- <div class="footer-copyright">
+                        
+                        
+                         <div class="footer-copyright">
                             <div class="container-fluid">
                                 © 2019 Team Project: <a href="#">Team User Names</a>
 
                             </div>
-                        </div> -->
-                        <!--/.Copyright-->
+                        </div> 
+                        
 
                     </footer>
                     <!--/.Footer-->
