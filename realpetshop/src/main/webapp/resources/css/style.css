@@ -4,9 +4,9 @@
 	font-family: 'Poppins', sans-serif;
 }
 /* 페이지 한 눈에 보기 쉽게 양 옆 빈 칸 조정 */
-body
-{
-}
+body{
+
+	}
 
 /*/////////////////////Header/////////////////////// */
 .navbar-expand-lg
@@ -78,6 +78,7 @@ a:hover
 {
 	margin-top: -13px;
 }
+
 
 
 

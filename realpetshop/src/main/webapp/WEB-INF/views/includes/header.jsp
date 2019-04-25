@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,6 +9,8 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="resources/css/style.css" />
+
+
 <title>Pet Shop</title>
 
 </head>
@@ -29,8 +34,16 @@
 	</div>
 	  <div class="collapse navbar-collapse" id="navbarNav">
 	    <ul class="navbar-nav">
-	      <li class="nav-item active">
-	        <a class="nav-link" href="#">Login<span class="sr-only">(current)</span></a>
+	      <!-- <li class="nav-item active">
+	        <a class="nav-link" href="../login1">Login<span class="sr-only">(current)</span></a>
+	      </li> -->
+	      <li>
+	      	<select name="loginselect" onchange="window.open(value,'_self')">
+	      		<option value="login select">login select</option>
+	      		<option value="../login1">구매자 로그인</option>
+	      		<option value="../SellerLogin">판매자 로그인</option>
+	      		<option value="../adminLogin">관리자 로그인</option>
+	      	</select>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="#">Join</a>
@@ -64,3 +77,13 @@
 	</nav>
 	
 </header>
+
+<script>
+	
+</script>
+
+
+
+
+
+
