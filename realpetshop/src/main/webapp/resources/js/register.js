@@ -35,9 +35,6 @@ $(function(){
 				required:true,
 				minlength:2
 			},
-			addr:{
-				required:true,
-			},
 			gender:{
 				required:true,
 			},
@@ -61,9 +58,6 @@ $(function(){
 			username:{
 				required:"이름은 필수 입력 요소입니다.",
 				minlength:"이름은 최소 2자리는 입력해야 합니다"
-			},
-			addr:{
-				required:"주소는 필수 입력 요소입니다."
 			},
 			gender:{
 				required:"성별은 필수 입력 요소입니다."
