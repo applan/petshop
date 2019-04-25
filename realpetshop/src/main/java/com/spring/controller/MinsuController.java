@@ -4,8 +4,10 @@ import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.spring.domain.EmailVO;
 import com.spring.service.EmailService;
@@ -16,24 +18,31 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class MinsuController {
 
-	@GetMapping("email")
+	@GetMapping("/email")
 	public String emailPage() {
-		log.info("email");
+		log.info("email...");
 		return "management/email";
+	}
+
+	@GetMapping("emailresult")
+	public String emailResult(String result) {
+		return "management/emailresult";
 	}
 	
 	@PostMapping("/sendEmail")
-	public void sendEmail(EmailVO vo) {
-		log.info("Host : "+vo.getHost()+"\nUser : "+vo.getTo()+"\nText : "+vo.getText());
+	public String sendEmail(EmailVO vo,Model model) {
+		log.info("sendEmail...");
 		
 		EmailService service = new EmailService();
 		try {
 			service.sendImage(vo);
-		} catch (AddressException e) {
-			e.printStackTrace();
+		
 		} catch (MessagingException e) {
 			e.printStackTrace();
+			model.addAttribute("result","false");
+			return "management/emailresult";
 		};
-		
+		model.addAttribute("result","true");
+		return "management/emailresult";
 	}
 }
