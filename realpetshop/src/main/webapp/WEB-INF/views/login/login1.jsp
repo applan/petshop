@@ -7,7 +7,7 @@
     <form class="form-signin" style="margin-left: 100px; margin-top: 70px;">
   <div>
   <div class="img-class">
-  	<a href="adminLogin"><img src="resources/img/logo.png" style="width:300px;"/></a>
+  	<a href="adminLogin"><img src="/resources/img/logo.png" style="width:300px;"/></a>
   	</div>
   </div>
   <h1 class="h3 mb-3 font-weight-normal" >로그인</h1>
