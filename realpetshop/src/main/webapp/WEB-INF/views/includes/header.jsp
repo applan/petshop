@@ -4,15 +4,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="UTF-8">
 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="/resources/css/style.css" />
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="resources/css/style.css" />
 
@@ -21,16 +22,22 @@
 
 </head>
 <body>
+
+
+
+<!-- ë¡ê·¸ì¸/íìê°ì/ì¥ë°êµ¬ë/ì»¤ë®¤ëí° -->
+
 <!-- Header -->
 <header id="header">
-	<div class="header">
+	 <div class="header">
 	  	<img src="resources/img/logo.png" alt="" />
+
 	</div>
 
-<!-- topbar -->
     <div id="topbar">
     <div class="container">
       <div class="row">
+      
         <div class="col-sm-6">
           <div class="contactinfo">
               <a href="#"><i class="fa fa-phone" id="ph"></i>+2 95 01 88 821</a>
@@ -62,14 +69,13 @@
       </div>
     </div>
   </div>
-    
 
 	  <div class="collapse navbar-collapse" id="navbarNav">
 	    <ul class="navbar-nav">
 
-	      <!-- <li class="nav-item active">
+	       <li class="nav-item active">
 	        <a class="nav-link" href="../login1">Login<span class="sr-only">(current)</span></a>
-	      </li> -->
+	      </li> 
 	      <!-- 충동해결 -->
 	      <li>
 	      	<select name="loginselect" onchange="window.open(value,'_self')">
@@ -95,8 +101,8 @@
 	        <a class="nav-link" href="#">Notice</a>
 	      </li>
 	    </ul>
+
 	  </div>
-	</nav>
 
 	
 <!-- navbar -->
@@ -129,8 +135,12 @@
 		  </div>
 	  </div>
 	  
+
+	  
+<!-- ê²ìì°½ -->
+
+
 <!-- search -->
-	
    	<div class="search-box">
    		<input class="search-txt" type="text" id="search" placeholder="Search . . ."/>
    		<a href="#" class="search-btn">
@@ -138,7 +148,7 @@
    		</a>
    	</div>
 
-<!-- 검색창 -->
+   	</nav>
 
 	
 </header>
