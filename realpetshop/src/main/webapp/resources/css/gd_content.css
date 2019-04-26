@@ -200,26 +200,25 @@
 .member .box .login {
     overflow:hidden;
 }
-.member .box .login .input-info {
+ .member .box .login .input-info {
     float:left;
 }
 .member .box .login .input-info div {
     position:relative;
     margin:11px 0 0;
-}
+ }
 .member .box .login .input-info div .text {
     width:269px;
     height:36px;
-    padding:0 13px;
+    padding:0px 13px;
     border:1px solid #ccc;
     color:#8c8c8c;
     font-size:13px;
-    line-height:36px;
+    line-height:0px;
 }
 .member .box .login .input-info div label {
     position:absolute;
-    top:9px;
-    left:13px;
+
     color:#8c8c8c;
     font-size:13px;
     cursor:text;
