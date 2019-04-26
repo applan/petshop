@@ -47,7 +47,7 @@
                                 <!--/.Third column-->
                                 
                                 <!--Fourth column-->
-                                <div class="col-md-2 mx-auto" style="margin: 15px 0px 15px 15px!important;">
+                                <div class="col-md-2 mx-auto" style="margin: 25px 0px 15px 15px!important;">
                                     <dl>
                                         <dt><a href="#!">Email:</a></dt>
                                         	<dd>hong123@gmail.com</dd>
@@ -55,7 +55,7 @@
                                         	<dd>+91 7568543012 or +91 9571195353</dd>
                                     </dl>
                                 </div>
-                                <!--/.Fourth column-->
+                                <!--/.Fo urth column-->
 
                             </div>
                         </div>
@@ -74,9 +74,7 @@
                     <!--/.Footer-->
                                     
                 </div>
-<!-- carousel -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+
 
 </body>
 </html>

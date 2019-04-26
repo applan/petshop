@@ -17,13 +17,13 @@
 				  </ol>
 				  	<div class="carousel-inner">
 					    <div class="carousel-item active">
-					      <img class="d-block w-100" src="https://wifiexpress.co.kr/wp/wp-content/uploads/2013/05/2018-%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A5%E1%86%AF-%E1%84%8B%E1%85%B5%E1%84%87%E1%85%A6%E1%86%AB%E1%84%90%E1%85%B3-%E1%84%87%E1%85%A2%E1%84%82%E1%85%A5-9%E1%84%8B%E1%85%AF%E1%86%AF.jpg" alt="First slide">
+					      <img class="d-block w-100" src="/resources/img/event1.jpg" alt="First slide">
 					    </div>
 					    <div class="carousel-item">
-					      <img class="d-block w-100" src="https://wifiexpress.co.kr/wp/wp-content/uploads/2013/05/2018-%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A5%E1%86%AF-%E1%84%8B%E1%85%B5%E1%84%87%E1%85%A6%E1%86%AB%E1%84%90%E1%85%B3-%E1%84%87%E1%85%A2%E1%84%82%E1%85%A5-5%E1%84%8B%E1%85%AF%E1%86%AF-2.png" alt="Second slide">
+					      <img class="d-block w-100" src="/resources/img/event2.jpg" alt="Second slide">
 					    </div>
 					    <div class="carousel-item">
-					      <img class="d-block w-100" src="https://wifiexpress.co.kr/wp/wp-content/uploads/2013/05/2018-%E1%84%91%E1%85%A7%E1%86%BC%E1%84%8E%E1%85%A1%E1%86%BC-%E1%84%8B%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%86%B7%E1%84%91%E1%85%B5%E1%86%A8-%E1%84%8B%E1%85%B5%E1%84%87%E1%85%A6%E1%86%AB%E1%84%90%E1%85%B3-%E1%84%87%E1%85%A2%E1%84%82%E1%85%A5.jpg" alt="Third slide">
+					      <img class="d-block w-100" src="/resources/img/event3.jpg" alt="Third slide">
 					    </div>
 				  	</div>
 				  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -39,8 +39,8 @@
 		</div>
 		
 		<!-- Popular -->
-		<div class="popular" style="text-align: center; margin-top: 100px; margin-bottom: 20px; font-size: 50px;" >
-			<i class="fa fa-star" style="color: #FDCE31;"></i> Top <i class="fa fa-star" style="color: #FDCE31;"></i>
+		<div class="popular" id="popular" style="font-size: 50px; text-align: center; margin-top: 30px;">
+			<i class="fa fa-star"></i> TOP <i class="fa fa-star"></i>
 		</div>
 		<div class="bd-example">
 			<div class="card-deck">
@@ -100,4 +100,8 @@
 		</div>
 	</div>
 </div>
+<!-- carousel -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
 <%@include file="includes/footer.jsp" %>
+
