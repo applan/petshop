@@ -1,15 +1,27 @@
-body {	
-	line-height: 1.2;
-    font-family: 'Roboto',sans-serif;
-    margin: 0;
-}
-/* 페이지 한 눈에 보기 쉽게 양 옆 빈 칸 조정 */
-body{
 
-	}
+/* @media screen and (max-width: 1280px) 
+{
+	*
+} */
+html
+{
+	scroll-behavior: smooth;
+}
+
+body
+{
+	line-height: 1.2;
+    margin: 0;
+    font-family: 'Roboto',sans-serif;
+}
 
 /*/////////////////////Header/////////////////////// */
-.header img
+.title 
+{
+    width: 100%;
+    text-align: center;
+}
+.title img
 {
     margin: -15px 0 -20px 15px;
     height: 200px;
@@ -29,13 +41,17 @@ body{
   	margin-left:auto; 
   	margin-right:0;
 }
+.navbar-nav .nav-link 
+{
+    padding: 0 98px 0 0!important;
+}
 ul
 {
 	font-family: 'Roboto', regular;
 	font-size:
 }
-a {
-    color: #212529 !important;
+a
+{
     text-decoration: none;
     background-color: transparent;
 }
@@ -50,17 +66,119 @@ a:hover
     margin-top: -8px;
     margin-bottom: -13px;
 }
-/* 검색창 */
-/* .form-inline
+ul.navbar-nav 
 {
+    margin-left: 65%;
+}
+.popular>i
+{
+	color: #FDCE31;
+}
+#category
+{
+    background: none repeat scroll 0 0 #FCE4BD;
+    padding: 10px 0 10px 0;
+    transition: all 0.5s;
+    font-family: 'Jua', sans-serif;
+    
+}
+.pet-category
+{
+	color: #DE6868!important;
+	margin: 0 15px 0 15px;
+}
+
+
+/*//////////// scroll up ///////////////*/
+
+.scroll
+{
+	margin: 0;
+	padding: 0;
+}
+.gotopbtn
+{
+	position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #DE6868;
+    bottom: 20px;
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
+    z-index: 1;
+    border-radius: 40px;
+}
+
+
+/* //////////scroll up 종료 ///////////////*/
+
+
+/* sidebar */
+
+#sidebar
+{
+	width: 14.3em;
+    height: auto;
+    margin: 20em auto 0;
+	color: #fff;
+	text-transform: uppercase;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -11em;
+    z-index: 1;
+}
+#sidebar ul
+{
+	list-style: none;
+	margin-left: 50px;
+}
+#sidebar ul li
+{
+	display: block;
+	background: #FCE4BD;
+	padding: 1em 1.5em;
+	position: relative;
+	transition: transform .5s;
+}
+#sidebar ul li:nth-child(1)
+{
+	background-color: #DE6868;
+}
+
+#sidebar ul li:hover
+{
+	transform: translateX(5em);
+}
+#sidebar ul li a
+{
+	display: block;
+	color: #fff;
+	text-decoration: none;
+}
+#sidebar ul li span
+{
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	font-size: 1em;
 	margin: 0 auto;
-	
-} */
+	padding: 1em;
+	right: 0.167em;
+}
+/* sidebar 종료*/
+
+
 .search-box
 {
 	position: absolute;
     top: 50%;
-    right: 10%;
+    right: 15%;
     transform: translate(0%,-50%);
     background: #DE6868;
     height: 40px;
@@ -132,9 +250,19 @@ a:hover
 }
 #topbar 
 {
-	background: none repeat scroll 0 0 #F0F0E9;
+	background: none repeat scroll 0 0;
     padding: 10px 0 10px 0;
     transition: all 0.5s;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+#topbar a {
+    color: #909090;
+}
+#topbar>a:hover
+{
+    text-decoration: none;
+    color: #000;
 }
 #topbar .social-links a 
 {
@@ -142,6 +270,17 @@ a:hover
     padding: 4px 12px;
     display: inline-block;
     line-height: 1px;
+}
+.pet-category
+{
+	width: 100%;
+    text-align: center;	
+}
+.pet-category>a 
+{
+    color: #DE6868;
+    padding: 0 60px 0 60px;
+    font-size: 20px;
 }
 .social-links a  
 {
@@ -159,8 +298,9 @@ a:hover
 a:hover
 {
     text-decoration: none;
+    
 }
-.lo, .jo, .ca, .ev, .no, #ph, #en{
+.lo, .jo, .ca, .ev, .no, .ph, .en{
     margin: 0 10px 0 5px;
 }
 #fa
@@ -175,6 +315,31 @@ a:hover
 {
 	display: flex;
 	justify-content: flex-end;
+}
+.facebook a:hover
+{
+	color: #344571!important;
+	transition: 0.5s;
+}
+.twitter a:hover
+{
+	color: #50BFF6!important;
+	transition: 0.5s;
+}
+.instagram a:hover
+{
+	color: #FC7702!important;
+	transition: 0.5s;
+}
+.google-plus a:hover
+{
+	color: #E81E25!important;
+	transition: 0.5s;
+}
+
+.col-sm-4 {
+    margin-left: 50px;
+    margin-right: -50px;
 }
 
 /*///////////////////////////////////// footer //////////////////////////////////////*/
@@ -191,6 +356,10 @@ a:hover
 {
     color: #2E2E2E;
 }
+.row a {
+    color: #000;
+    font-family: 'Jua', sans-serif;
+}
 footer.page-footer 
 {
 	background-color: #FCE4BD!important;
@@ -198,6 +367,7 @@ footer.page-footer
     padding-top: 20px;
     color: #DE6868;
     height: 180px;
+    font-family: 'Jua', sans-serif;
 }
 footer.page-footer .call-to-action 
 {
@@ -259,4 +429,7 @@ footer.page-footer .footer-copyright
 	margin-right: 50px;
 }
 
-
+/* carousel */
+.carousel {
+    position: relative;
+}
