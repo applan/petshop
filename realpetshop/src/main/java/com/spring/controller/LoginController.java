@@ -53,4 +53,10 @@ public class LoginController {
 		return "login/EditPersonalInformation";
 	}
 	
+	@GetMapping("/cart1")
+	public String cart() {
+		log.info("카트");
+		return "cart/cart1";
+	}
+	
 }

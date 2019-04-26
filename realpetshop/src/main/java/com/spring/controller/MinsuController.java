@@ -45,4 +45,11 @@ public class MinsuController {
 		model.addAttribute("result","true");
 		return "management/emailresult";
 	}
+	
+	@GetMapping("adminChoicePage")
+	public String adminChoicePage() {
+		log.info("adminChoicePage...");
+		
+		return "management/adminChoicePage";
+	}
 }
