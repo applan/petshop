@@ -25,7 +25,7 @@
         <div class="col-sm-6">
           <div class="contactinfo">
               <i class="fa fa-phone" id="fa"></i><a href="#">+91 7568543012 or +91 9571195353</a>
-              <i class="fa fa-envelope" id="fa"></i><a href="#">nnmmaz95@gmail.com</a>
+              <i class="fa fa-envelope" id="fa"></i><a href="https://mail.google.com/mail">nnmmaz95@gmail.com</a>
           </div>
         </div>
         
