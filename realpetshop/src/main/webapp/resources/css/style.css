@@ -2,18 +2,10 @@ body {
 	line-height: 1.2;
     font-family: 'Roboto',sans-serif;
     margin: 0;
-<<<<<<< HEAD
+
 }
 
 /* 페이지 한 눈에 보기 쉽게 양 옆 빈 칸 조정 */
-=======
-}
-/* 페이지 한 눈에 보기 쉽게 양 옆 빈 칸 조정 */
-body{
-
-	}
-
->>>>>>> refs/remotes/origin/master
 /*/////////////////////Header/////////////////////// */
 .header img
 {

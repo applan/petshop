@@ -20,12 +20,10 @@
 <body>
 <!-- Header -->
 <header id="header">
-	<!-- <div class="header">
+	 <div class="header">
 	  	<img src="resources/img/logo.png" alt="" />
 
 	</div>
-=======
-	</div> -->
 <!-- topbar -->
     <div id="topbar">
     <div class="container">
