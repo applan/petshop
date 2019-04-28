@@ -1,6 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@include file="../includes/header.jsp" %>
+<link rel="stylesheet" href="/resources/css/style.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
@@ -11,7 +14,7 @@
 <div style="background-color:white;">
 
 <div class="container">
-<div><img src="resources/img/logo.png" style="width:300px; margin-left: 380px;"/></div>
+<!-- <div><img src="resources/img/logo.png" style="width:300px; margin-left: 380px;"/></div> -->
 
 <form id="regist" >	<!-- method="post" -->
 	<div class="form-group row justify-content-center">

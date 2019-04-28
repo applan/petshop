@@ -1,6 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@include file="../includes/header.jsp" %>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel = "stylesheet" href = "/resources/css/gd_common.css" />
 <link rel = "stylesheet" href = "/resources/css/gd_content.css" />
 <link rel = "stylesheet" href = "/resources/css/gd_custom.css" />
@@ -10,13 +13,15 @@
 <link rel = "stylesheet" href = "/resources/css/gd_layout.css" />
  <link rel = "stylesheet" href = "/resources/css/gd_share.css" />
 
+<link rel="stylesheet" href="/resources/css/style.css" />
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 
     <div id="container">
         <!-- 본문 시작 : start -->
         <div id="content">
-<img src="resources/img/logo.png" style="width:300px; margin-left: 350px; margin-top: 50px; " />
+<!-- <img src="resources/img/logo.png" style="width:300px; margin-left: 350px; margin-top: 50px; " /> -->
 <div class="member find-pw-page" style="padding-left: 30px; padding-top: 0px;">
     <h2>비밀번호 찾기</h2>
 

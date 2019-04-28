@@ -1,16 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@include file="../includes/header.jsp" %>
-<<<<<<< HEAD
-=======
+<link rel="stylesheet" href="/resources/css/style.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
->>>>>>> refs/remotes/origin/master
 <div class="row" style="padding-left: 700px;">
   <div class="text-center"><!--  style="padding-left: 250px;" -->
     <form class="form-signin" style="margin-left: 100px; margin-top: 70px;">
   <div>
   <div class="img-class">
-  	<a href="adminLogin"><img src="resources/img/logo.png" style="width:300px;"/></a>
+  	<!-- <a href="adminLogin"><img src="resources/img/logo.png" style="width:300px;"/></a> -->
   	</div>
   </div>
   <h1 class="h3 mb-3 font-weight-normal" >로그인</h1>

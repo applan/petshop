@@ -1,16 +1,26 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@include file="../includes/header.jsp" %>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel = "stylesheet" href = "/resources/css/gd_common.css" />
 <link rel = "stylesheet" href = "/resources/css/gd_content.css" />
+<link rel = "stylesheet" href = "/resources/css/gd_custom.css" />
+<link rel = "stylesheet" href = "/resources/css/gd_goods-view.css" />
+<link rel = "stylesheet" href = "/resources/css/gd_item-display.css" />
+<link rel = "stylesheet" href = "/resources/css/gd_layout.css" />
+<link rel = "stylesheet" href = "/resources/css/gd_layout.css" />
+<link rel = "stylesheet" href = "/resources/css/gd_share.css" />
+
+<link rel="stylesheet" href="/resources/css/style.css" />
 
 <div id="container">
         <!-- 본문 시작 : start -->
         <div id="content">
 
 <div class="member">
-	<img src="/resources/img/logo.png" style="width: 300px; margin-left: 130px;" />
+	<!-- <img src="/resources/img/logo.png" style="width: 300px; margin-left: 130px;" /> -->
 
 
     <form id="formFindId"  action="" ><!-- method="post" novalidate="novalidate"-->
@@ -18,20 +28,18 @@
             <div id="divFindId">
                 <h3>회원 아이디찾기</h3>
 
-                <div class="login" style="padding-bottom: 20px;">
+                <div class="login">
                     <div class="input-info">
                     
    
 							
-                        <div >
- 
+                        <div>
                             <input type="text" class="text" id="username" name="username" class="form-control" placeholder="이름">
                             <small id="username" class="text-info"></small>
                         </div>
-		<br/>
-                        <div >
-                  
-                             <input type="text" class="text" id="email" name="email" class="form-control"placeholder="가입메일주소">
+
+                        <div>
+                            <input type="text" class="text" id="email" name="email" class="form-control"placeholder="가입메일주소">
                             <small id="email" class="text-info"></small>
                         </div>
 
