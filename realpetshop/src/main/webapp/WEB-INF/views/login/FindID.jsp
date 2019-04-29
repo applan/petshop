@@ -34,6 +34,9 @@
                              <input type="text" class="text" id="email" name="email" class="form-control"placeholder="가입메일주소">
                             <small id="email" class="text-info"></small>
                         </div>
+<!-- 실험용 -->
+<a href="EditPersonalInformation" style="color:black;">개인정보수정</a>
+
 
                     </div>
                     <button type="submit" class="skinbtn point2 fi-id" style="height:103px;"><em>아이디 찾기</em></button>
@@ -51,69 +54,7 @@
         </div>
     </form>
 </div>
-<script>
 
-</script>
-
-<!-- <script type="text/javascript">
-    $(document).ready(function () {
-        $('input').keyup(function () {
-            $('.caution-msg1', 'form').addClass('dn');
-        });
-        $('.btn-find-password', 'form').click(function (e) {
-            location.href = '';
-            e.preventDefault();
-        });
-        $('.btn-login', 'form').click(function (e) {
-            location.href = '../member/login.php';
-            e.preventDefault();
-        });
-
-        $('#formFindId').validate({
-            dialog: false,
-            rules: {
-                userName: {
-                    required: true
-                },
-                userEmail: {
-                    required: true,
-                    email: true
-                }
-            },
-            messages: {
-                userName: {
-                    required: "이름을 입력해주세요."
-                },
-                userEmail: {
-                    required: "이메일을 입력해주세요.",
-                    email: "메일 형식이 틀렸습니다."
-                }
-            }, submitHandler: function (form) {
-                var params = $(form).serializeArray();
-                params.push({name: "mode", value: "findId"});
-                $.post('../member/find_ps.php', params).done(function (data, textStatus, jqXHR) {
-                    if (data.result) {
-                        var compiled = _.template($('#templateFindIdResult').html());
-                        var result_message = __('회원님의 아이디는 %s 입니다', '<br><strong>' + data.memberId + '</strong>');
-                        var templateData = {memberId: data.memberId, userName: $('#userName').val(), "result_message": result_message};
-                        $('#divFindId').html(compiled(templateData));
-                    } else {
-                        $(form).find('.caution-msg1').removeClass('dn').text(data.message);
-                    }
-                });
-            }, invalidHandler: function (form, validator) {
-                var errors = validator.numberOfInvalids();
-                if (errors) {
-                    $(form.target).find('.caution-msg1').removeClass('dn').text(validator.errorList[0].message);
-                    validator.errorList[0].element.focus(); 
-                }
-            }
-        });
-    });
-</script> -->
-<%-- <script type="text/template" id="templateFindIdResult">
-    <p class="result-msg"><%=userName%> <%=result_message%></p>
-</script> --%>
 </div>
         <!-- 본문 끝 : end -->
 
