@@ -102,10 +102,10 @@
                                 </h4>
                                 <p class="card-text">
                                     <div style=" text-align:left;color:#ff6c2a; margin-right:10px;">
-										<b style="font-size:20px;">37</b><span style="font-size:15px;">%</span>
-										<del style="color: #909090;">5,900원 </del>
+										<b style="font-size:20px;">25</b><span style="font-size:15px;">%</span>
+										<del style="color: #909090;">3000원 </del>
 										<strong class="item_price">
-										<div style="color: #333;">3,700원 </div>
+										<div style="color: #333;">2,250원 </div>
 										</strong>
 										<div style="height:22px; margin-top:5px;">
 											<span id="date_out" style="font-size:14px;color:#00891A;letter-spacing:-2px;">월요일 04/29 출고 예정</span>
@@ -140,10 +140,9 @@
                                 </h4>
                                 <p class="card-text">
                                     <div style=" text-align:left;color:#ff6c2a; margin-right:10px;">
-										<b style="font-size:20px;">37</b><span style="font-size:15px;">%</span>
-										<del style="color: #909090;">5,900원 </del>
+										<b style="font-size:20px;">펫샵가</b>
 										<strong class="item_price">
-										<div style="color: #333;">3,700원 </div>
+										<div style="color: #333;">46,000원 </div>
 										</strong>
 										<div style="height:22px; margin-top:5px;">
 											<span id="date_out" style="font-size:14px;color:#00891A;letter-spacing:-2px;">월요일 04/29 출고 예정</span>

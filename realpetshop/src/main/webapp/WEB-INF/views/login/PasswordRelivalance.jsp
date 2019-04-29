@@ -1,69 +1,59 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@include file="../includes/header.jsp" %>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@include file="../includes/header.jsp"%>
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+	integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+	crossorigin="anonymous">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel = "stylesheet" href = "/resources/css/gd_common.css" />
-<link rel = "stylesheet" href = "/resources/css/gd_content.css" />
-<link rel = "stylesheet" href = "/resources/css/gd_custom.css" />
-<link rel = "stylesheet" href = "/resources/css/gd_goods-view.css" />
-<link rel = "stylesheet" href = "/resources/css/gd_item-display.css" />
-<link rel = "stylesheet" href = "/resources/css/gd_layout.css" />
-<link rel = "stylesheet" href = "/resources/css/gd_layout.css" />
- <link rel = "stylesheet" href = "/resources/css/gd_share.css" />
 
 <link rel="stylesheet" href="/resources/css/style.css" />
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 
-    <div id="container">
-        <!-- 본문 시작 : start -->
-        <div id="content">
-<!-- <img src="resources/img/logo.png" style="width:300px; margin-left: 350px; margin-top: 50px; " /> -->
-<div class="member find-pw-page" style="padding-left: 30px; padding-top: 0px;">
-    <h2>비밀번호 찾기</h2>
+<div class="container">
+	<div class="no-gutters py-5 row">
+		<div class="col-1 col-sm-4"></div>
+		<div class="col-10 col-sm-4">
+			<div class="text-center">
+				<!-- 본문 시작 : start -->
+				<!-- <img src="/resources/img/logo.png" style="width: 300px; margin-left: 130px;" /> -->
+				<form class="formFindPassword" action="">
+					<!-- method="post" novalidate="novalidate"-->
+					<p class="p">
+						<i class="fas fa-cat"></i>
+					</p>
+					<label for="username" class="sr-only"></label> <input type="text"
+						id="username" class="form-control" placeholder="아이디" required
+						autofocus> <label for="email" class="sr-only"></label> <input
+						type="email" id="email" class="form-control"
+						placeholder="가입한 이메일 주소" required>
+					<button type="button"
+						class="btn btn-primary btn-block btn-lg gradient" type="submit">비밀번호찾기
+					</button>
 
-    <div class="box">
-        <form name="formFind" id="formFind" action="" method="post" novalidate="novalidate">
-            <fieldset>
+					<!-- 				<p class="dn caution-msg1">일치하는 회원정보가 없습니다. 다시 입력해 주세요.</p>
+ -->
 
-                <h3>아이디, 이메일 입력</h3>
-
-                <p class="guide" style="font-size: small;">비밀번호를 찾고자 하는 아이디, 이메일을 입력해 주세요.</p>
-
-                
-                <div class="find-pw" style="padding:0px; border-top: 0px;">
-                    <div class="input-id">
-                        <div class="txt-field">
-                            <input type="email" id="email" name="email" class="text" placeholder="이메일">
-                        </div>
-                        <p class="dn" id="errorMessage"></p>
-                    </div>
-                </div>
-                <div class="find-pw" style="padding:0px; border-top: 0px;">
-                    <div class="input-id">
-                        <div class="txt-field">
-                            <input type="text" id="memberId" name="memberId" class="text" placeholder="아이디">
-                        </div>
-                        <p style="font-size: small;">아이디를 모르시나요?<a href="FindID" class="btn-find-id">아이디 찾기</a></p>
-                        <p class="dn" id="errorMessage"></p>
-                    </div>
-                </div>
-                <div class="btn" style="padding-left: 50px; margin-top: 0px;">
-                <div class="btn">
-                    <button class="skinbtn base3 fp-next" type="button" onclick="location.href='#'" style="background-color: red; border-color: red;"><em>비밀번호 찾기</em></button>
-                </div>
-                <div class="btn">
-                    <button class="skinbtn base3 fp-next" type="button" onclick="location.href='login1'" style="background-color: red; border-color: red;"><em>로그인 하러가기</em></button>
-                </div>
-                </div>
-            </fieldset>
-        </form>
-    </div>
+					<div class="foo">
+						<div>
+							<h6>
+								|<a href="FindID" style="color: black;">아이디 찾기</a>| <a
+									href="login1" style="color: black;">로그인하기</a>|
+							</h6>
+						</div>
+					</div>
+					<div>
+						<p class="mt-5 mb-3 text-muted">© 2019-01-10~2019-06-20</p>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="col-1 col-sm-4"></div>
+	</div>
 </div>
-
 <!-- <script type="text/javascript">
     $(document).ready(function () {
         $('input').keyup(function () {
@@ -108,9 +98,7 @@
         });
     });
 </script> -->
-</div>
-</div>
-<%@include file="../includes/footer.jsp" %>
+<%@include file="../includes/footer.jsp"%>
 
 
 
