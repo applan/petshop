@@ -52,38 +52,6 @@
 	</div>
 </div>
         
-        <!-- <div class="collapse navbar-collapse" id="navbarNav">
-	    <ul class="navbar-nav">
-
-	      <li class="nav-item active">
-	        <a class="nav-link" href="../login1">Login<span class="sr-only">(current)</span></a>
-	      </li>
-	      충동해결
-	      <li>
-	      	<select name="loginselect" onchange="window.open(value,'_self')">
-	      		<option value="login select">login select</option>
-	      		<option value="../login1">구매자 로그인</option>
-	      		<option value="../SellerLogin">판매자 로그인</option>
-	      		<option value="../adminLogin">관리자 로그인</option>
-	      	</select>
-
-	      <li class="nav-item active">
-	        <a class="nav-link" href="login1">Login<span class="sr-only">(current)</span></a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="SignUp">Join</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="#">Cart</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="#">Event</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="#">Notice</a>
-	      </li>
-	    </ul>
-	  </div> -->
 
 <!-- title -->
 <!-- search -->
@@ -125,7 +93,7 @@
 
 <!-- sidebar -->
 
-<div id="sidebar">
+<!-- <div id="sidebar">
 	<ul>
 		<li><a href="/">Home 
 				<span><i class="fa fa-paw"></i></span>
@@ -143,7 +111,7 @@
 				<span><i class="fa fa-paw"></i></span>
 			</a></li>
 	</ul>
-</div>
+</div> -->
 
 </header>
 
