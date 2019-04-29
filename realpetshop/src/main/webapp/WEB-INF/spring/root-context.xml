@@ -10,16 +10,17 @@
    <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
       <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
       <property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:xe"/>
-      <property name="username" value="system"/>
-      <property name="password" value="oracle"/>
+      <property name="username" value="javaDB"/>
+      <property name="password" value="12345"/>
    </bean>
    <bean id="ds" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
       <constructor-arg ref="hikariConfig"/>
-   </bean>
+   </bean>	
    
    <!-- mybatis SqlSessionFacoty 빈 생성하기 -->
    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
       <property name="dataSource" ref="ds"/>
    </bean>
    <mybatis-spring:scan base-package="com.spring.mapper"/> 
+   
 </beans>
