@@ -1,18 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@include file="../includes/header.jsp" %>
 
 
 <div style="background-color:white;">
 
 <div class="container">
-<div><img src="resources/img/logo.png" style="width:300px; margin-left: 380px;"/></div>
+<div><img src="/resources/img/logo.png" style="width:300px; margin-left: 380px;"/></div>
 
-<form id="registtt" >	<!-- method="post" -->
+<form id="registtt" method="post">	<!-- method="post" -->
 	<div class="form-group row justify-content-center">
 		<label for="userid" class="col-sm-2 col-form-label">아이디</label>
 		<div class="col-sm-6">			
-			<input type="text" name="userid" id="userid" class="form-control" readonly="readonly"/>
+			<input type="text" name="userid" id="userid" class="form-control" 
+			value="${info.userid}" readonly="readonly"/>
 			 <small id="userid" class="text-info"></small>	
 		</div>
 	</div>
@@ -40,22 +42,34 @@
 	<div class="form-group row justify-content-center">
 		<label for="name" class="col-sm-2 col-form-label">이름 </label>
 		<div class="col-sm-6">	
-			<input type="text" name="username" id="username" class="form-control" readonly="readonly"/>
+			<input type="text" name="username" id="username" class="form-control" 
+			value="${info.username}" readonly="readonly"/>
 			<small id="username" class="text-info"></small>
 		</div>	
 	</div>
 	<div class="form-group row justify-content-center">
 		<label for="pass3" class="col-sm-2 col-form-label">주소</label>
 		<div class="col-sm-6">	
-			<input type="text" name="addr" id="addr" class="form-control" placeholder="수정할 주소를 입력하세요"/>
-			<small id="addr" class="text-info"></small>
+			<input type="text" name="new_addr" id="new_addr" class="form-control" placeholder="수정할 주소를 입력하세요"/>
+			<small id="new_addr" class="text-info"></small>
 		</div>	
 	</div>
-	
+	<div class="form-group row justify-content-center">
+	<label for="pass2" class="col-sm-2 col-form-label">애완동물</label>
+	  <div class="col-sm-6">		
+			<div class="form-check form-check-inline">		
+				<input type="radio" id="cat" name="cat" value="고양이" class="form-check-input"/>고양이			
+		  	</div>	
+		  	<div class="form-check form-check-inline">
+				<input type="radio"  name="dog" value="강아지" class="form-check-input"/>강아지				
+			</div>
+			
+		</div>
+	</div>
 	<div class="form-group row justify-content-center">
 		<label for = "email" class="col-sm-2 col-form-label">이메일</label>
 		<div class="col-sm-6">	
-			<input type="email" name="email" id="email" class="form-control" placeholder="example@gmail.com"/>
+			<input type="email" name="new_email" id="new_email" class="form-control" placeholder="example@gmail.com"/>
 			동의 <input type="checkbox" id="" name=""/>
 			비동의 <input type="checkbox" id="" name=""/>
 			<div>
@@ -66,9 +80,16 @@
 		</div>	
 	
 	</div>
-	<div class="form-group text-center" style="padding-right:50px; padding-top: 5px;]">		
+	<div class="form-group text-center" style="padding-right:50px; padding-top: 5px;">		
 		<button type="submit" class="btn btn-primary" style="background-color: red; border-color:red;">수정</button>
 	    <button type="reset" class="btn btn-secondary" style="background-color: red; border-color:red; color:white;">취소</button>		
+		
+		<!-- 실험용 -->
+		<a href="login1">로그아웃</a>
+		<a href="DeleteId">회원탈퇴</a>
+		
+		
+		
 	</div>
 			
 </form>

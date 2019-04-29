@@ -6,17 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-
-
-
-
-
 <div style="background-color:white;">
 
 <div class="container">
 <!-- <div><img src="resources/img/logo.png" style="width:300px; margin-left: 380px;"/></div> -->
 
-<form id="regist" >	<!-- method="post" -->
+<form id="regist" method="post">	<!-- method="post" -->
 	<div class="form-group row justify-content-center">
 		<label for="userid" class="col-sm-2 col-form-label">아이디</label>
 		<div class="col-sm-6">			
@@ -87,5 +82,6 @@
 </div>
 </div>
 <%@include file="../includes/footer.jsp" %>
+<!-- <script src="/resources/js/jquery.jquery-3.3.1.js"></script> -->
 <script src="/resources/js/jquery.validate.js"></script>
 <script src="/resources/js/signup.js"></script>

@@ -63,51 +63,6 @@
         </form>
     </div>
 </div>
-
-<!-- <script type="text/javascript">
-    $(document).ready(function () {
-        $('input').keyup(function () {
-            $('#errorMessage', 'form').addClass('dn');
-        });
-
-        $('.btn-find-id').click(function (e) {
-            location.href = '../member/find_id.php';
-            e.preventDefault();
-        });
-
-        $('#formFind button[type="submit"]').click(function () {
-            if ($('#formFind').valid() == false) return false;
-        });
-
-        $('#formFind').validate({
-            dialog: false,
-            rules: {
-                memberId: {
-                    required: true
-                }
-            },
-            messages: {
-                memberId: {
-                    required: "아이디를 입력해주세요"
-                }
-            }, submitHandler: function (form) {
-                var data = $(form).serializeArray();
-                data.push({name: "mode", value: "find_member"});
-
-                $.post('../member/find_ps.php', data).done(function (data, textStatus, jqXHR) {
-                    console.log('gd_member ajax', data, textStatus, jqXHR);
-                    var code = data.code;
-                    var message = data.message;
-                    if (_.isUndefined(code) && _.isUndefined(message)) {
-                        form.submit();
-                    } else {
-                        $('#errorMessage', form).removeClass('dn').html('<strong>' + message + '</strong>');
-                    }
-                });
-            }
-        });
-    });
-</script> -->
 </div>
 </div>
 <%@include file="../includes/footer.jsp" %>
