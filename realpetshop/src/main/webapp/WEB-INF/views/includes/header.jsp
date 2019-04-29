@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Jua|Roboto+Condensed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Jua|Roboto+Condensed|Do+Hyeon|Noto+Sans+KR" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="resources/css/style.css" />
@@ -25,7 +25,7 @@
         <div class="col-sm-6">
           <div class="contactinfo">
               <i class="fa fa-phone" id="fa"></i><a href="#">+91 7568543012 or +91 9571195353</a>
-              <i class="fa fa-envelope" id="fa"></i><a href="https://mail.google.com/mail">nnmmaz95@gmail.com</a>
+              <i class="fa fa-envelope" id="fa"></i><a href="#">nnmmaz95@gmail.com</a>
           </div>
         </div>
         
