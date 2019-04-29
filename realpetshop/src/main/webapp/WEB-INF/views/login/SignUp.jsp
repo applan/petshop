@@ -84,5 +84,6 @@
 </div>
 </div>
 <%@include file="../includes/footer.jsp" %>
+<script src="/resources/js/jquery.jquery-3.3.1.js"></script>
 <script src="/resources/js/jquery.validate.js"></script>
 <script src="/resources/js/signup.js"></script>
