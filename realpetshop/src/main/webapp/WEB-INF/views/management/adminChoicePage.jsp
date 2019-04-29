@@ -5,7 +5,7 @@
  
 </style>
 <div>
-<h1>회원 관리</h1>
+<h1 style="font-family: 'Jua', sans-serif; font-size: 55px;">회원 관리</h1>
 <table class="table ta">
   <thead class="thead-dark">
     <tr>

@@ -18,6 +18,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class MinsuController {
 
+	
+	
 	@GetMapping("/email")
 	public String emailPage() {
 		log.info("email...");
