@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@include file="includes/header.jsp" %>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/resources/css/style.css" />
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 <!-- carousel -->
 <div id="wrapper" class="container">
+<div class="border" style="margin-bottom: 10px;"></div>
 	<div id="content">
 		<div class="container">
 			<div class="row">
@@ -42,7 +44,9 @@
 		
 <!-- Popular -->
 <p style="font-family: 'Jua', sans-serif; font-size:50px;text-align:center;margin:100px 0px 0px 0px; auto;display:inline-block;font-weight:300;width:100%;color:#2b2b2b"><i class="fas fa-star" style="color: #FAC822;"></i> 인기 상품 <i class="fas fa-star" style="color: #FAC822;"></i></p>
-		
+
+<div class="border"></div>
+
 <section class="wrapper">
     <div class="container-fostrap">
         <div class="content">
@@ -458,7 +462,7 @@
 	</div>
 </div>
 
-<div class="border-line"></div>
+<div class="border" style="margin-top: 0;"></div>
 
 <!-- carousel -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
