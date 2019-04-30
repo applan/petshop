@@ -1,9 +1,11 @@
 package com.spring.domain;
 
+import java.util.Date;
+
 import lombok.Data;
 
 @Data
-public class UserVO {
+public class UserVO_Trash {
 	private int userno;
 	private String userid;
 	private String password;
@@ -16,6 +18,8 @@ public class UserVO {
 	private String emailcheck;
 	private String num;
 	private boolean checkResult;
+	private Date trashDate;
+	private String printTrashDate;
 	
 
 }

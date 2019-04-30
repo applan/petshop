@@ -40,12 +40,12 @@
   <tbody>
     <c:forEach var="list" items="${trash_member_list}">
 		<tr>
-		  <td><a href="${list.userNum}">${list.userNum}</a></td>
-		  <td>${list.userId}</td>
-		  <td>${list.userName}</td>
+		  <td><a href="${list.userno}">${list.userno}</a></td>
+		  <td>${list.userid}</td>
+		  <td>${list.username}</td>
 		  <td>${list.printTrashDate}</td>
-		  <td><a href="delete_member?userNum=${list.userNum}"><img src="resources/img/remove_member.png" class="checkimg_d"/></a></td>
-		  <td><a href="refresh_goods?goodsNum=${list.goodsNum}"><img src="resources/img/up.png" class="checkimg_d"/></a></td>
+		  <td><a href="permanently_Delete_user?userno=${list.userno}"><img src="resources/img/remove_member.png" class="checkimg_d"/></a></td>
+		  <td><a href="refresh_user?userno=${list.userno}"><img src="resources/img/up.png" class="checkimg_d"/></a></td>
 		</tr>
 		</c:forEach>
   </tbody>
@@ -73,7 +73,7 @@
 		  <td>${list2.goodsPriceFormat} 원</td>
 		  <td>${list2.goodsId}</td>
 		  <td>${list2.printTrashDate}</td>
-		  <td><a href="delete_goods?goodsNum=${list2.goodsNum}"><img src="resources/img/remove_goods.png" class="checkimg_d"/></a></td>
+		  <td><a href="permanently_Delete_goods?goodsNum=${list2.goodsNum}"><img src="resources/img/remove_goods.png" class="checkimg_d"/></a></td>
 		  <td><a href="refresh_goods?goodsNum=${list2.goodsNum}"><img src="resources/img/up.png" class="checkimg_d"/></a></td>
 		</tr>
 		</c:forEach>

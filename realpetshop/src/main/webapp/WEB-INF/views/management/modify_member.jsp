@@ -28,38 +28,33 @@
       <th scope="col">회원번호</th>
       <th scope="col">회원 아이디</th>
       <th scope="col">회원 이름</th>
-      <th scope="col">광고 수신 여부</th>
-      <th scope="col">회원 권한 상태</th>
-      <th scope="col">회원 정보 삭제</th>
-      <th scope="col">회원 정보 수정</th>
+      <th scope="col">권한 상태</th>
     </tr>
   </thead>
   <tbody>
-    <c:forEach var="list" items="${member_list}">
 		<tr>
-		  <td><a href="${list.userno}">${list.userno}</a></td>
-		  <td>${list.userid}</td>
-		  <td>${list.username}</td>
-		  <c:if test="${list.checkResult}">
-		   <td ><img src="resources/img/checked.png" class="checkimg"/></td>
-          </c:if>
-		  <c:if test="${!list.checkResult}">
-		   <td >X</td>
-          </c:if>
-          <c:if test="${list.num == '1'}">
+		  <td><a href="${UserVO_Info.userno}">${UserVO_Info.userno}</a></td>
+		  <td>${UserVO_Info.userid}</td>
+		  <td>${UserVO_Info.username}</td>
+		  <c:if test="${UserVO_Info.num == '1'}">
 		   <td >관리자</td>
           </c:if>
-		  <c:if test="${list.num == '2'}">
+		  <c:if test="${UserVO_Info.num == '2'}">
 		   <td >판매자</td>
           </c:if>
-		  <c:if test="${list.num == '3'}">
+		  <c:if test="${UserVO_Info.num == '3'}">
 		   <td >구매자</td>
           </c:if>
-		  <td><a href="delete_member?userno=${list.userno}"><img src="resources/img/delete-friend.png" class="checkimg_d"/></a></td>
-		  <td><a href="modify_member?userno=${list.userno}"><img src="resources/img/icon_update.png" class="checkimg_d"/></a></td>
 		</tr>
-		</c:forEach>
-		
+  <form action="" method="post">
+   <select name="num_change" >
+     <option value="3">구매자</option>
+     <option value="2">판매자</option>
+     <option value="1">관리자</option>
+   </select>
+   <input type="hidden" name="userno" value="${UserVO_Info.userno}"/>
+   <input type="submit" value="권한 부여" />
+  </form>
   </tbody>
 </table>
 </div>

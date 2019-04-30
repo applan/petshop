@@ -12,6 +12,6 @@ public class GoodsVO {
  private String goodsUrl; // O
  private String goodsDate; // O
  private String goodsInfo; // O
- private int goodsPrice; // X
+ private long goodsPrice; // X
  private String goodsPriceFormat;
 }

@@ -18,8 +18,9 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.spring.domain.EmailVO;
 import com.spring.domain.GoodsVO;
 import com.spring.domain.GoodsVO_Trash;
-import com.spring.domain.TA_UserVO;
-import com.spring.domain.TA_UserVO_Trash;
+import com.spring.domain.UserChangeVO;
+import com.spring.domain.UserVO;
+import com.spring.domain.UserVO_Trash;
 import com.spring.service.EmailService;
 import com.spring.service.MinsuService;
 
@@ -32,6 +33,9 @@ public class MinsuController {
 	@Inject
 	private MinsuService minService;
 	
+	@Inject
+	private EmailService emailService;
+	
 	@GetMapping("/email") 
 	public String emailPage() {
 		// 이메일 페이지  호출
@@ -43,16 +47,9 @@ public class MinsuController {
 	public String sendEmail(EmailVO vo,Model model) {
 		log.info("sendEmail...");
 		
-		EmailService service = new EmailService();
-		try {
-			service.sendImage(vo);
 		
-		} catch (MessagingException e) {
-			e.printStackTrace();
-			model.addAttribute("result_email","false");
-			return "management/emailresult";
-		};                           
-		model.addAttribute("result_email","true");
+		int res = emailService.getListCheckEmail(vo);;                           
+		model.addAttribute("result_email",res);
 		return "management/result_Page";
 	}
 
@@ -73,14 +70,12 @@ public class MinsuController {
 	public String adminChoicePage_memeber(Model model) {
 		// admin_회원관리 페이지 호출
 		log.info("adminChoicePage_member...");
-		List<TA_UserVO> list = minService.getList_member();
+		List<UserVO> list = minService.getList_member();
 		for(int i=0; i<list.size(); i++) {
-			if(list.get(i).getUsercheck().equals("1")) {
+			if(list.get(i).getEmailcheck().equals("1")) {
 				list.get(i).setCheckResult(true);
-				log.info("으아아아아"+list.get(i).isCheckResult()+"dmdjdjdjdj"+list.get(i).getUsercheck());
 			}else {
 				list.get(i).setCheckResult(false);
-				log.info("으아아아아"+list.get(i).isCheckResult()+"dmdjdjdjdj"+list.get(i).getUsercheck());
 			}
 		}
 		model.addAttribute("member_list", list);
@@ -136,16 +131,38 @@ public class MinsuController {
     	return "management/result_Page";
     }
     
+    
+    
     @GetMapping("delete_member")
-    public String delete_member(int userNum,Model model) {
+    public String delete_member(int userno,Model model) {
     	log.info("adminChoicePage_delete_member....");
-    	int result = minService.delete_members(userNum);
+    	int result = minService.delete_members(userno);
     	if(result >0 ) {
     		model.addAttribute("result_delete_member","true");
     	}else {
     		model.addAttribute("result_delete_member","false");
     	}
     	
+    	return "management/result_Page";
+    }
+    
+    @GetMapping("modify_member")
+    public String modify_member_go(Model model,int userno) {
+    	log.info("adminChoicePage_modify_member......");
+    	UserVO vo = minService.getUserInfo(userno);
+    	model.addAttribute("UserVO_Info", vo);
+    	return "management/modify_member";
+    }
+    
+    @PostMapping("modify_member")
+    public String modify_member(UserChangeVO vo,Model model) {
+    	log.info("adminChoicePage_modify_member....modify..");
+    	int result = minService.modify_authority(vo);
+    	if(result >0) {
+    		model.addAttribute("result_modify","true");
+    	}else {
+    		model.addAttribute("result_modify", "false");
+    	}
     	return "management/result_Page";
     }
     
@@ -173,7 +190,7 @@ public class MinsuController {
     public String adminChoicePage_trash(Model model) {
     	log.info("trash...");
     	List<GoodsVO_Trash> list = minService.getList_goods_trash();
-    	List<TA_UserVO_Trash> list2 = minService.getList_member_trash();
+    	List<UserVO_Trash> list2 = minService.getList_member_trash();
     	SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat ( "yyyy-MM-dd");
     	if(!list.isEmpty()) {
     	for(int i=0; i<list.size(); i++) {
@@ -200,6 +217,40 @@ public class MinsuController {
     		model.addAttribute("result_restore", "true");
     	}else {
     		model.addAttribute("result_restore", "false");
+    	}
+    	return "management/result_Page";
+    }
+    
+    @GetMapping("refresh_user")
+    public String refresh_user(int userno,Model model) {
+    	log.info("refresh_user...");
+    	int result = minService.restore_member(userno);
+    	if(result >0) {
+    		model.addAttribute("result_restore_user", "true");
+    	}else {
+    		model.addAttribute("result_restore_user", "false");
+    	}
+    	return "management/result_Page";
+    }
+    
+    @GetMapping("permanently_Delete_goods")
+    public String permanently_Delete_goods(int goodsNum,Model model) {
+    	int result = minService.permanently_Delete_goods(goodsNum);
+    	if(result >0) {
+    		model.addAttribute("result_permanently_Delete_goods", "true");
+    	}else {
+    		model.addAttribute("result_permanently_Delete_goods", "false");
+    	}
+    	return "management/result_Page";
+    }
+    
+    @GetMapping("permanently_Delete_user")
+    public String permanently_Delete_user(int userno,Model model) {
+    	int result = minService.permanently_Delete_member(userno);
+    	if(result >0) {
+    		model.addAttribute("result_permanently_Delete_user", "true");
+    	}else {
+    		model.addAttribute("result_permanently_Delete_user", "false");
     	}
     	return "management/result_Page";
     }

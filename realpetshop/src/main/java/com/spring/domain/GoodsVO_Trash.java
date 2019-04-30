@@ -14,7 +14,7 @@ public class GoodsVO_Trash {
  private String goodsUrl;
  private String goodsDate;
  private String goodsInfo;
- private int goodsPrice;
+ private long goodsPrice;
  private String goodsPriceFormat;
  private Date trashDate;
  private String printTrashDate;

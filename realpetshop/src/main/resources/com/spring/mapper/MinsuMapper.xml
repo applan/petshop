@@ -7,22 +7,24 @@
    values(goodsNum_sq.nextVal, #{goodsName}, #{goodsId}, #{goodsMainUrl}, #{goodsUrl , jdbcType=VARCHAR}, #{goodsDate , jdbcType=DATE}, #{goodsInfo , jdbcType=VARCHAR}, #{goodsPrice})
  </insert>
  
-
+ <update id="modify_authority">
+  update pet_user set num = #{num_change} where userno = #{userno}  
+ </update>
 
  <select id="countRequest" resultType="int"> 
   select count(*) from test_request_goods
  </select>
  
  <select id="countMember" resultType="int"> 
-  select count(*) from test_user
+  select count(*) from pet_user
  </select>
 
  <select id="getList_delete" resultType="com.spring.domain.GoodsVO">
   select * from test_goods
  </select>
  
- <select id="getList_member" resultType="com.spring.domain.TA_UserVO">
-  select * from test_user
+ <select id="getList_member" resultType="com.spring.domain.UserVO">
+  select * from pet_user
  </select>
  
  <select id="getList_request" resultType="com.spring.domain.GoodsVO">
@@ -38,7 +40,7 @@
  </delete>
  
  <delete id="delete_members">
-   delete from test_user where userNum = #{userNum}
+   delete from pet_user where userno = #{userno}
  </delete>
  
  <!-- Trash 담당 처리  -->
@@ -51,33 +53,33 @@
    values(#{goodsNum}, #{goodsName}, #{goodsId}, #{goodsMainUrl}, #{goodsUrl , jdbcType=VARCHAR}, #{goodsDate , jdbcType=DATE}, #{goodsInfo , jdbcType=VARCHAR}, #{goodsPrice})
  </insert>
  
- <select id="getMember" resultType="com.spring.domain.TA_UserVO">
-  select * from test_user where userNum = #{userNum}
+ <select id="getMember" resultType="com.spring.domain.UserVO">
+  select * from pet_user where userno = #{userno}
  </select>
  
   <insert id="insertTrash_members">
-   insert into test_user_trashData(userNum, userId, userName, usercheck) 
-   values(#{userNum}, #{userId}, #{userName}, #{usercheck})
+   insert into pet_user_trash(userno, password, userid, username, emailcheck,addr,email,cat,dog,num) 
+   values(#{userno},#{password}, #{userid}, #{username}, #{emailcheck},#{addr},#{email},#{cat},#{dog},#{num})
  </insert>
  
   <select id="getList_goods_trash" resultType="com.spring.domain.GoodsVO_Trash">
   select * from test_goods_trash
  </select>
  
- <select id="getList_member_trash" resultType="com.spring.domain.TA_UserVO_Trash">
-  select * from test_user_trashData
+ <select id="getList_member_trash" resultType="com.spring.domain.UserVO_Trash">
+  select * from pet_user_trash
  </select>
  
  <delete id="permanently_Delete_member">
-  delete from test_user_trashData where userNum = #{userNum}
+  delete from pet_user_trash where userno = #{userno}
  </delete>
  
  <delete id="permanently_Delete_goods">
   delete from test_goods_trash where goodsNum = #{goodsNum}
  </delete>
  
-  <select id="getMember_Trash" resultType="com.spring.domain.TA_UserVO_Trash">
-  select * from test_user where userNum = #{userNum}
+  <select id="getMember_Trash" resultType="com.spring.domain.UserVO_Trash">
+  select * from pet_user_trash where userno = #{userno}
  </select>
  
   <select id="getGoods_Trash" resultType="com.spring.domain.GoodsVO_Trash">
@@ -86,6 +88,11 @@
  
   <insert id="Reinsert_goods">
    insert into test_goods(goodsNum, goodsName, goodsId, goodsMainUrl, goodsUrl, goodsDate, goodsInfo, goodsPrice) 
-   values(#{goodsNum}, #{goodsName}, #{goodsId}, #{goodsMainUrl}, #{goodsUrl , jdbcType=VARCHAR}, #{goodsDate , jdbcType=DATE}, #{goodsInfo , jdbcType=VARCHAR}, #{goodsPrice})
+   values(#{goodsNum}, #{goodsName}, #{goodsId}, #{goodsMainUrl}, #{goodsUrl , jdbcType=VARCHAR}, to_DATE(#{goodsDate , jdbcType=DATE},'yyyy-MM-dd'), #{goodsInfo , jdbcType=VARCHAR}, #{goodsPrice})
+ </insert>
+ 
+   <insert id="Reinsert_members">
+   insert into pet_user(userno, password, userid, username, emailcheck,addr,email,cat,dog,num) 
+   values(#{userno},#{password}, #{userid}, #{username}, #{emailcheck, jdbcType=VARCHAR},#{addr, jdbcType=VARCHAR},#{email},#{cat, jdbcType=VARCHAR},#{dog, jdbcType=VARCHAR},#{num})
  </insert>
 </mapper>

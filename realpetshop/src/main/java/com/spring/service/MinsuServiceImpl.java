@@ -9,8 +9,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.spring.domain.GoodsVO;
 import com.spring.domain.GoodsVO_Trash;
-import com.spring.domain.TA_UserVO;
-import com.spring.domain.TA_UserVO_Trash;
+import com.spring.domain.UserChangeVO;
+import com.spring.domain.UserVO;
+import com.spring.domain.UserVO_Trash;
 import com.spring.mapper.MinsuMapper;
 
 import lombok.extern.slf4j.Slf4j;
@@ -33,7 +34,7 @@ public class MinsuServiceImpl implements MinsuService {
 	}
 
 	@Override
-	public List<TA_UserVO> getList_member() {
+	public List<UserVO> getList_member() {
 		return mapper.getList_member();
 	}
 	
@@ -42,7 +43,7 @@ public class MinsuServiceImpl implements MinsuService {
 	@Transactional
 	public int delete_goods(int goodsNum) {
 		GoodsVO vo = mapper.getGood(goodsNum);
-		if(vo.getGoodsDate() != null) {String newdate = vo.getGoodsDate().substring(0,9);vo.setGoodsDate(newdate);}
+		if(vo.getGoodsDate() != null) {vo.setGoodsDate(vo.getGoodsDate().substring(0, 10));}
 
 		mapper.insertTrash_goods(vo);
 		return mapper.delete_goods(goodsNum);
@@ -70,10 +71,10 @@ public class MinsuServiceImpl implements MinsuService {
 
 	@Override
 	@Transactional
-	public int delete_members(int userNum) {
-		TA_UserVO vo = mapper.getMember(userNum);
+	public int delete_members(int userno) {
+		UserVO vo = mapper.getMember(userno);
 		mapper.insertTrash_members(vo);
-		return mapper.delete_members(userNum);
+		return mapper.delete_members(userno);
 	}
 
 	@Override
@@ -82,13 +83,13 @@ public class MinsuServiceImpl implements MinsuService {
 	}
 
 	@Override
-	public List<TA_UserVO_Trash> getList_member_trash() {
+	public List<UserVO_Trash> getList_member_trash() {
 		return mapper.getList_member_trash();
 	}
 
 	@Override
-	public int permanently_Delete_member(int userNum) {
-		return mapper.permanently_Delete_member(userNum);
+	public int permanently_Delete_member(int userno) {
+		return mapper.permanently_Delete_member(userno);
 	}
 
 	@Override
@@ -96,14 +97,24 @@ public class MinsuServiceImpl implements MinsuService {
 		return mapper.permanently_Delete_goods(goodsNum);
 	}
 
-//	@Override
-//	@Transactional
-//	public int restore_member(int userNum) {
-//		TA_UserVO_Trash vo =mapper.getMember_Trash(userNum);
-//		TA_UserVO
-//		
-//		return 0;
-//	}
+	@Override
+	@Transactional
+	public int restore_member(int userno) {
+		UserVO_Trash vo = mapper.getMember_Trash(userno);
+        UserVO invo = new UserVO();
+        invo.setUserno(vo.getUserno());
+        invo.setUserid(vo.getUserid());
+        invo.setPassword(vo.getPassword());
+		invo.setUsername(vo.getUsername());
+		invo.setAddr(vo.getAddr());
+		invo.setEmail(vo.getEmail());
+		invo.setEmailcheck(vo.getEmailcheck());
+		if(vo.getCat() != null)invo.setCat(vo.getCat());
+		if(vo.getDog() != null)invo.setDog(vo.getDog());
+		if(vo.getNum() != null)invo.setNum(vo.getNum());
+		mapper.Reinsert_members(invo);
+		return mapper.permanently_Delete_member(userno);
+	}
 
 	@Override
 	@Transactional
@@ -115,11 +126,21 @@ public class MinsuServiceImpl implements MinsuService {
 		invo.setGoodsId(vo.getGoodsId());
 		invo.setGoodsMainUrl(vo.getGoodsMainUrl());
 		if(vo.getGoodsUrl() != null) {invo.setGoodsUrl(vo.getGoodsUrl());}
-		if(vo.getGoodsDate() != null) {invo.setGoodsDate(vo.getGoodsDate());}
+		if(vo.getGoodsDate() != null) {invo.setGoodsDate(vo.getGoodsDate().substring(0,10));}
 		if(vo.getGoodsInfo() != null) {invo.setGoodsInfo(vo.getGoodsInfo());}
 		invo.setGoodsPrice(vo.getGoodsPrice());
 		mapper.Reinsert_goods(invo);
 		return mapper.permanently_Delete_goods(goodsNum);
+	}
+
+	@Override
+	public int modify_authority(UserChangeVO vo) {
+		return mapper.modify_authority(vo);
+	}
+
+	@Override
+	public UserVO getUserInfo(int userno) {
+		return mapper.getMember(userno);
 	}
 
 

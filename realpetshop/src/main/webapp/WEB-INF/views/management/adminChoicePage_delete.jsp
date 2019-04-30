@@ -33,7 +33,12 @@
 		  <td>${list.goodsName}</td>
 		  <td>${list.goodsPriceFormat} 원</td>
 		  <td>${list.goodsId}</td>
-		  <td>${list.goodsDate}</td>
+		  <c:if test="${!empty list.goodsDate}">
+		   <td >${list.goodsDate}</td>
+          </c:if>
+		  <c:if test="${empty list.goodsDate}">
+		   <td ><img src="resources/img/infinite.png" class="checkimg_d"/></td>
+          </c:if>
 		  <td><a href="delete_goods?goodsNum=${list.goodsNum}"><img src="resources/img/delete_goods.png" class="checkimg_d"/></a></td>
 		</tr>
 		</c:forEach>

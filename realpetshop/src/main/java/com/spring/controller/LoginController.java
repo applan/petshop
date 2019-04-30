@@ -94,19 +94,6 @@ public class LoginController {
 		log.info(vo.getEmail());
 		log.info(vo.getNum());
 		
-		
-		
-		boolean boo = vo.ConfirmPwd(vo.getPassword(), vo.getConfirm_password());
-		
-		//password와 confirm_password가 같으면
-			//회원가입
-			if(boo) {
-				int result = service.registMember(vo);
-				if(result>0) {
-					
-					return "redirect:login1";
-				}
-			}
 			return "SignUp";
 	}
 	//중복아이디 검사 

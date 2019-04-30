@@ -13,17 +13,20 @@
 	 // 이메일 전송 후 결과 
 
 	var res = "${result_email}";
-	if(res === "true"){
-		alert("이메일 전송 성공");
-		res = "";
+	if(res >= 1){
+		alert(res+"명에게 전송 성공했습니다.");
 		location.href="/email";
 	}
-	if(res === "false"){
-		alert("이메일 전송 실패");
-		res = "";
+	if(res == -2){
+		alert("이메일 수신 동의한 인원이 없습니다.");
+		
 		location.href="/email";
 	}
-	
+	if(res === -1){
+		alert("오류 발생");
+		res 
+		location.href="/email";
+	}
 	
 	
 	var res2 = "${result_en}";
@@ -78,6 +81,58 @@
 		alert("상품 정보 복원 실패");
 		res5 = "";
 		location.href="/adminChoicePage_delete";
+	}
+	
+	// 상품 정보 영구 삭제 시 넘어오는 결과
+	var res6 = "${result_permanently_Delete_goods}";
+	if(res6 === "true"){
+		alert("상품 정보 영구 삭제 성공");
+		res6 = "";
+		location.href="/adminChoicePage_trash";
+	}
+	if(res6 === "false"){
+		alert("상품 정보 영구 삭제 실패");
+		res6 = "";
+		location.href="/adminChoicePage_trash";
+	}
+	
+	// 상품 정보 영구 삭제 시 넘어오는 결과
+	var res7 = "${result_permanently_Delete_user}";
+	if(res7 === "true"){
+		alert("회원 정보 영구 삭제 성공");
+		res7 = "";
+		location.href="/adminChoicePage_trash";
+	}
+	if(res7 === "false"){
+		alert("회원 정보 영구 삭제 실패");
+		res7 = "";
+		location.href="/adminChoicePage_trash";
+	}
+	
+	// 유저 정보 영구 삭제 시 넘어오는 결과
+	var res8 = "${result_restore_user}";
+	if(res8 === "true"){
+		alert("회원 정보 복원 성공");
+		res8 = "";
+		location.href="/adminChoicePage_member";
+	}
+	if(res8 === "false"){
+		alert("회원 정보 복원 실패");
+		res8 = "";
+		location.href="/adminChoicePage_member";
+	}
+	
+	// 상품 정보 영구 삭제 시 넘어오는 결과
+	var res9 = "${result_modify}";
+	if(res9 === "true"){
+		alert("회원 권한 수정 성공");
+		res9 = "";
+		location.href="/adminChoicePage_member";
+	}
+	if(res9 === "false"){
+		alert("회원 권한 수정 실패");
+		res9 = "";
+		location.href="/adminChoicePage_member";
 	}
 	
 });
