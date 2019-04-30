@@ -22,7 +22,8 @@ public interface UserMapper {
 	public UserVO useridfind(UserVO vo);
 	//비밀번호 찾기
 	public int passwordfind(passwordVO vo);
-	
+
+
 	
 
 }

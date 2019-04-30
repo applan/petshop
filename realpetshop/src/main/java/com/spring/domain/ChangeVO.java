@@ -15,5 +15,6 @@ public class ChangeVO {
 	private String cat;
 	private String emailcheck;
 	private String new_email;
+	private String num;
 	
 }

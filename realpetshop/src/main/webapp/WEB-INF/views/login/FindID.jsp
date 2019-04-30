@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@include file="../includes/header.jsp"%>
+
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 	integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
@@ -19,7 +20,7 @@
 			<div class="text-center">
 				<!-- 본문 시작 : start -->
 				<!-- <img src="/resources/img/logo.png" style="width: 300px; margin-left: 130px;" /> -->
-				<form class="formFindId" action="">
+				<form class="formFindId" id="formFindId" action="">
 					<!-- method="post" novalidate="novalidate"-->
 					<p class="p">
 						<i class="fas fa-dog"></i>
@@ -42,21 +43,14 @@
                 onclick = "location.href = 'login1'"
                 style="background-color: red; border-color: red; color:white;"><em>로그인하기</em></button>
             </div>
-        </div>
-
-
-					<!-- 				<p class="dn caution-msg1">일치하는 회원정보가 없습니다. 다시 입력해 주세요.</p>
- -->
-					
-		
+        </div>		
 				</form>
 			</div>
 		</div>
 		<div class="col-1 col-sm-4"></div>
 	</div>
-
-
 <!-- 본문 끝 : end -->
 <%@include file="../includes/footer.jsp"%>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="/resources/js/jquery.validate.js"></script>
 <script src="/resources/js/findid.js"></script>

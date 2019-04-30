@@ -14,6 +14,7 @@ public class UserVO {
 	private String cat;
 	private String dog;
 	private String emailcheck;
+	private String num;
 	
 	public boolean ConfirmPwd (String password, String confirm_password) {
 		return password.equals(confirm_password);

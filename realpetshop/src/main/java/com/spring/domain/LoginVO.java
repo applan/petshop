@@ -13,5 +13,6 @@ public class LoginVO {
 	private String dog;
 	private String cat;
 	private String emailcheck;
+	private String num;
 
 }

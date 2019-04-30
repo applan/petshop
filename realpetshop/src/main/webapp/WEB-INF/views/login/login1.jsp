@@ -14,7 +14,7 @@
 		<div class="col-1 col-sm-4"></div>
 		<div class="col-10 col-sm-4">
 			<div class="text-center">
-				<form class="form-signin">
+				<form class="form-signin" method="post">
 					<!-- <div>
 					<div class="img-class">
 						<a href="adminLogin"><img src="resources/img/logo.png" style="width:300px;"/></a>
@@ -24,16 +24,11 @@
 						<i class="fas fa-user-circle"></i>
 					</p>
 					<label for="userid" class="sr-only"></label> <input type="text"
-						id="userid" class="form-control" placeholder="아이디" required=""
-						autofocus=""> <label for="password" class="sr-only"></label>
-					<input type="password" id="password" class="form-control"
-						placeholder="패스워드" required="">
-					<div class="checkbox mb-3">
-						<label> <input type="checkbox" value="remember-me">
-							Remember me
-						</label>
-					</div>
-					<button type="button"
+						id="userid" name="userid" class="form-control" placeholder="아이디" required	autofocus> <label for="password" class="sr-only"></label>
+					<input type="password" id="password" name="current_password" class="form-control"
+						placeholder="패스워드" required>
+
+					<button type="submit"
 						class="btn btn-primary btn-block btn-lg gradient">로그인
 					</button>
 

@@ -11,6 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
@@ -44,33 +45,69 @@ public class LoginController {
 	
 	
 	@PostMapping("/login1")
-	public String login(HttpSession session, LoginVO vo, Model model) {
+	public String login(AuthInfo info, LoginVO vo, Model model,RedirectAttributes rttr) {
 		log.info("로그인 정보 가져오기 ....");
 		//로그인 시도
 		
-		log.info("으아아아 " + vo.getUserid() +"dd" + vo.getCurrent_password());
+		log.info("으아아아 " + vo.getUserid() +"dd" + vo.getCurrent_password()+"dd"+info.getNum());
 		
-		AuthInfo info=service.selectMember(vo);
+		info=service.selectMember(vo);		
 		
-		if(info==null) {
-			//다시 로그인 페이지로 이동
-			return "redirect:login1";
-		}else {
-			//로그인 성공 
-			// HttpSession 객체 사용
-			// @SessionAttributes("이름")
-			model.addAttribute("info",info);
-			//session.setAttribute("info", info);
-			// 인덱스 이동
-			return "redirect:EditPersonalInformation";
+		model.addAttribute("info",info);
+
+		if(info!=null) {
+			log.info(vo.getNum());
+			if("1".equals(info.getNum())) {
+				//관리자 페이지 만들어주기
+				return "redirect:EditPersonalInformation";
+			}
+			else if("2".equals(info.getNum())) {
+				//판매자 페이지
+				return "redirect:FindID";
+			}
+			else if("3".equals(info.getNum())) {
+				//구매자 페이지
+				return "redirect:/";
+			}
+			
 		}
+		log.info(vo.getNum());
+		return "login/SignUp";
 	}
-	
 	@GetMapping("/SignUp")
 	public String signup() {
 		log.info("가입 요청.....");
 		
-		return "/login/SignUp";
+		return "login/SignUp";
+		
+	}
+
+	//회원가입
+	@PostMapping("/SignUp")
+	public String signUp(@ModelAttribute("vo")UserVO vo, Model model) {
+		log.info("회원가입 요청...");
+		
+		log.info(vo.getUserid());
+		log.info(vo.getPassword());
+		log.info(vo.getUsername());
+		log.info(vo.getAddr());
+		log.info(vo.getEmail());
+		log.info(vo.getNum());
+		
+		
+		
+		boolean boo = vo.ConfirmPwd(vo.getPassword(), vo.getConfirm_password());
+		
+		//password와 confirm_password가 같으면
+			//회원가입
+			if(boo) {
+				int result = service.registMember(vo);
+				if(result>0) {
+					
+					return "redirect:login1";
+				}
+			}
+			return "SignUp";
 	}
 	//중복아이디 검사 
 	//http://localhost:8083/login/checkId
@@ -85,30 +122,6 @@ public class LoginController {
 			return "false";
 		return "true";//널이면 사용할 수 있는 아이디		
 	}	
-	//회원가입
-	@PostMapping("/SignUp")
-	public String signUp(@ModelAttribute("vo")UserVO vo) {
-		log.info("회원가입 요청...");
-		
-		log.info(vo.getUserid());
-		log.info(vo.getPassword());
-		log.info(vo.getUsername());
-		log.info(vo.getAddr());
-		log.info(vo.getEmail());
-		
-		boolean boo = vo.ConfirmPwd(vo.getPassword(), vo.getConfirm_password());
-		
-		//password와 confirm_password가 같으면
-			//회원가입
-			if(boo) {
-				int result = service.registMember(vo);
-				if(result>0) {
-					return "redirect:login1";
-				}
-			}
-			return "SignUp";
-	}
-
 	
 	
 	//로그아웃

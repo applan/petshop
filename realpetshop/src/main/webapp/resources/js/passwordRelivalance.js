@@ -1,5 +1,5 @@
 $(function(){
-	$("#passwordsearch").validate({
+	$("#formFindPassword").validate({
 		errorPlacement:function(error,element){ 
 			$(element).closest("form")
 			.find("small[id='"+element.attr("id")+"']")

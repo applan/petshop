@@ -17,6 +17,7 @@ public class passwordVO {
  private String new_password;
  private String userid;
  private String email;
+ private String num;
 private int getRandom;
  
  

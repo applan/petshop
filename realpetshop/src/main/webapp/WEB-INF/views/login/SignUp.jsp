@@ -54,20 +54,22 @@
 	</div>
 	<div class="form-group row justify-content-center">
 	  <div class="col-sm-6">		
-		  	<div class="form-check form-check-inline" style="
-    margin-right: 0px;
-    padding-left: 53px;
-">
+		  	<div class="form-check form-check-inline" style="margin-right: 0px; padding-left: 53px;">
 				<input type="radio"  id="dog" name="dog" value="dog" class="form-check-input"/>강아지				
 			</div>
 			
 		</div>
-	</div>	
+	</div>
+	<div class="form-group row justify-content-center">
+		<div class="col-sm-6">	
+			<input type="hidden" name="num" id="num" class="form-control" value="3"/>
+		</div>	
+	</div>
 	<div class="form-group row justify-content-center">
 		<label for = "email" class="col-sm-2 col-form-label">이메일</label>
 		<div class="col-sm-6">	
 			<input type="email" name="email" id="email"  class="form-control" placeholder="example@gmail.com"/>
-			<input type="radio" id="emailcheck" name="emailcheck" value="emailcheck"/>동의
+			<input type="radio" id="emailcheck" name="emailcheck" value="1"/>동의
 			<div>
 				<p></p>
 				<h6>동의시 이벤트 사항을 이메일로 보내줍니다.</h6>
@@ -84,16 +86,8 @@
 </form>
 </div>
 </div>
-<!-- <script>
-	var animal = $("input:radio[name=cat]:checked").val();
-	$('input:radio[name=cat]:input[value='+animal+']').attr("checked", true);
-	
-/* 	var st = $(":input:radio[name=search_type]:checked").val();
-	$('input:radio[name=search_type]:input[value=' + st + ']').attr("checked", true); */
 
-	
-</script> -->
 <%@include file="../includes/footer.jsp" %>
-<!-- <script src="resources/js/jquery.jquery-3.3.1.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="/resources/js/jquery.validate.js"></script>
 <script src="/resources/js/signup.js"></script>

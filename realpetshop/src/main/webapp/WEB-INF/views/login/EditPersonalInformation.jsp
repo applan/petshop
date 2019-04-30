@@ -3,14 +3,15 @@
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@include file="../includes/header.jsp" %>
-<script src="/resources/js/jquery-3.3.1.js"></script>
+
+
 
 <div style="background-color:white;">
 
 <div class="container">
 <div><img src="/resources/img/logo.png" style="width:300px; margin-left: 380px;"/></div>
 
-<form id="registtt" method="post">	<!-- method="post" -->
+<form class="registtt" id="registtt" method="post">	<!-- method="post" -->
 	<div class="form-group row justify-content-center">
 		<label for="userid" class="col-sm-2 col-form-label">아이디</label>
 		<div class="col-sm-6">			
@@ -77,7 +78,7 @@
 		<div class="col-sm-6">	
 			<input type="email" name="new_email" id="new_email" class="form-control" 
 			value="${info.email}" placeholder="example@gmail.com"/>
-			동의 <input type="radio" id="emailcheck" name="emailcheck" value="emailcheck"/><!-- onclick="radio_check2" -->
+			동의 <input type="radio" id="emailcheck" name="emailcheck" value="1"/><!-- onclick="radio_check2" -->
 			<div>
 				<p></p>
 				<h6>동의시 이벤트 사항을 이메일로 보내줍니다.</h6>
@@ -127,6 +128,7 @@
 
 </script>
 <%@include file="../includes/footer.jsp" %>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="/resources/js/jquery.validate.js"></script>
 <script src="/resources/js/editpersonalinformation.js"></script>
 

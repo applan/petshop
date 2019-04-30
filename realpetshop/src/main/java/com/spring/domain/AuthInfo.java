@@ -11,5 +11,9 @@ public class AuthInfo {
 	private String username;
 	private String email;
 	private String addr;
+	private String num;
+	private String cat;
+	private String dog;
+	private String emailcheck;
 
 }

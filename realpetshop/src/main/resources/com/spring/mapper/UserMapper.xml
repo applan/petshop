@@ -8,15 +8,16 @@
 </select>
 
 <insert id="registMember">
-		insert into pet_user(userno,userid,password,username,addr,email,cat,dog)
-		values(rno_seq.nextVal,#{userid},#{password},#{username},#{addr},#{email},#{cat,jdbcType=VARCHAR},#{dog,jdbcType=VARCHAR})
+		insert into pet_user(userno,userid,password,username,addr,email,cat,dog,emailcheck,num)
+		values(rno_seq.nextVal,#{userid},#{password},#{username},#{addr},#{email},
+		#{cat,jdbcType=VARCHAR},#{dog,jdbcType=VARCHAR},#{emailcheck,jdbcType=VARCHAR},#{num})
 </insert>
 
 <!-- 회원 로그인  -->
 <select id="selectMember" resultType="com.spring.domain.AuthInfo">
 		select * from pet_user
 		where userid=#{userid} and password =#{current_password}
-	</select>
+</select>
 <!--회원 탈퇴 -->
 <delete id ="deleteMember">
 		delete from pet_user
@@ -37,4 +38,5 @@
 <select id="useridfind" resultType="com.spring.domain.UserVO">
 	select userid from pet_user where username=#{username} and email=#{email}
 </select>
+
 </mapper>
