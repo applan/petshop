@@ -7,6 +7,14 @@
    values(goodsNum_sq.nextVal, #{goodsName}, #{goodsId}, #{goodsMainUrl}, #{goodsUrl}, #{goodsDate}, #{goodsInfo}, #{goodsPrice})
  </insert>
 
+ <select id="countRequest" resultType="int"> 
+  select count(*) from test_request_goods
+ </select>
+ 
+ <select id="countMember" resultType="int"> 
+  select count(*) from test_user
+ </select>
+
  <select id="getList_delete" resultType="com.spring.domain.GoodsVO">
   select * from test_goods
  </select>
@@ -15,9 +23,38 @@
   select * from test_user
  </select>
  
+ <select id="getList_request" resultType="com.spring.domain.GoodsVO">
+  select * from test_request_goods
+ </select>
+ 
+ <select id="getRequestInfo" resultType="com.spring.domain.GoodsVO">
+  select * from test_request_goods where goodsNum= #{goodsNum}
+ </select>
+ 
  <delete id="delete_goods">
    delete from test_goods where goodsNum = #{goodsNum}
  </delete>
  
+ <delete id="delete_members">
+   delete from test_user where userNum = #{userNum}
+ </delete>
  
+ <!-- Trash 담당 처리  -->
+ <select id="getGood" resultType="com.spring.domain.GoodsVO">
+  select * from test_goods where goodsNum = #{goodsNum}
+ </select>
+ 
+  <insert id="insertTrash_goods">
+   insert into test_goods_trash(goodsNum, goodsName, goodsId, goodsMainUrl, goodsUrl, goodsDate, goodsInfo, goodsPrice) 
+   values(#{goodsNum}, #{goodsName}, #{goodsId}, #{goodsMainUrl}, #{goodsUrl}, #{goodsDate}, #{goodsInfo}, #{goodsPrice})
+ </insert>
+ 
+ <select id="getMember" resultType="com.spring.domain.TA_UserVO">
+  select * from test_user where userNum = #{userNum}
+ </select>
+ 
+  <insert id="insertTrash_members">
+   insert into test_user_trashData(userNum, userId, userName, usercheck) 
+   values(#{userNum}, #{userId}, #{userName}, #{usercheck})
+ </insert>
 </mapper>

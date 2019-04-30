@@ -47,11 +47,11 @@ public class MinsuController {
 		
 		} catch (MessagingException e) {
 			e.printStackTrace();
-			model.addAttribute("result","false");
+			model.addAttribute("result_email","false");
 			return "management/emailresult";
 		};                           
-		model.addAttribute("result","true");
-		return "management/emailresult";
+		model.addAttribute("result_email","true");
+		return "management/result_Page";
 	}
 
 	
@@ -59,7 +59,10 @@ public class MinsuController {
 	// admin 페이지 호출
 	public String adminChoicePage(Model model) {
 		log.info("adminChoicePage...");
-		
+		int count_request = minService.countRequest();
+		int count_member = minService.countMember();
+		model.addAttribute("count_request", count_request);
+		model.addAttribute("count_member", count_member);
 		model.addAttribute("result_money", 200);  // 매출 목표치 표시를 위해 가져감 
 		return "management/adminChoicePage_main";
 	}
@@ -104,18 +107,18 @@ public class MinsuController {
 		return "management/adminChoicePage_enrollment";
 	}
 	@PostMapping("adminChoicePage_enrollment")
-	public String adminChoicePage_enrollment(GoodsVO vo,RedirectAttributes red) {
+	public String adminChoicePage_enrollment(GoodsVO vo,Model model) {
 		log.info("adminChoicePage_enrollment_insert...");
 		log.info(vo.toString());
 		int result = minService.insert(vo);
 		
 		if(result >0) {
-			red.addAttribute("result_en","true");
+			model.addAttribute("result_en","true");
 		}else {
-			red.addAttribute("result_en","false");
-			return "redirect:adminChoicePage_enrollment";
+			model.addAttribute("result_en","false");
+			
 		}
-		return "redirect:adminChoicePage_delete";
+		return "management/result_Page";
 	}
 	
 	
@@ -128,6 +131,46 @@ public class MinsuController {
     	}else {
     		model.addAttribute("result_delete", "false");
     	}
-    	return "management/adminChoicePage_delete_result";
+    	return "management/result_Page";
     }
+    
+    @GetMapping("delete_member")
+    public String delete_member(int userNum,Model model) {
+    	log.info("adminChoicePage_delete_member....");
+    	int result = minService.delete_members(userNum);
+    	if(result >0 ) {
+    		model.addAttribute("result_delete_member","true");
+    	}else {
+    		model.addAttribute("result_delete_member","false");
+    	}
+    	
+    	return "management/result_Page";
+    }
+    
+    @GetMapping("adminChoicePage_request")
+    public String adminChoicePage_request(Model model) {
+    	log.info("adminChoicePage_request..");
+    	List<GoodsVO> list =minService.getList_request();
+    	for(int i=0; i<list.size(); i++) {
+			list.get(i).setGoodsPriceFormat(String.format("%,d", list.get(i).getGoodsPrice()));
+		}
+    	model.addAttribute("request_list", list);
+    	return "management/adminChoicePage_request";
+    }
+    
+    @GetMapping("goodsInfo")
+    public String adminChoicePage_goodsInfo(int goodsNum,Model model) {
+    	log.info("goodsInfo...");
+    	GoodsVO vo =minService.getRequestInfo(goodsNum);
+    	vo.setGoodsPriceFormat(String.format("%,d", vo.getGoodsPrice()));
+    	model.addAttribute("request_vo", vo);
+    	return "management/request_window";
+    }
+    
+    @GetMapping("adminChoicePage_trash")
+    public String adminChoicePage_trash() {
+    	log.info("trash...");
+    	return "management/adminChoicePage_trash";
+    }
+    
 }

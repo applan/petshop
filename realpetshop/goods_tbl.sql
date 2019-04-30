@@ -27,7 +27,7 @@ drop sequence goodsNum_sq;
 
 select * from goods_tbl;
 
-insert into goods_btl values(goodsNum_sq.nextVal,
+insert into goods_tbl values(goodsNum_sq.nextVal,
 '강아지 사료', 
 '김파파', 
 'http://postfiles9.naver.net/20160205_296/bon24amc_1454666068969GKlx6_PNG/1.png?type=w1',

@@ -113,17 +113,22 @@
                         </li>
                         <li>
                             <a href="adminChoicePage_member"><i class="fa fa-fw "><img src="resources/img/member.png" class="im" style="height: 20px; width: 20px;"/></i>  회원 관리 </a>
-                            
                         </li>
                         <li>
                             <a href="email"><i class="fa fa-fw"><img src="resources/img/email.png" class="im" style="height: 20px; width: 20px;"/></i>  신상품 광고  </a>
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="adminChoicePage_delete"><i class="fa fa-fw "><img src="resources/img/file.png" class="im" style="height: 20px; width: 20px;"/></i> 상품 정보 삭제 </a>
+                            <a href="adminChoicePage_delete"><i class="fa fa-fw "><img src="resources/img/file.png" class="im" style="height: 20px; width: 20px;"/></i> 상품 관리 </a>
                         </li>
                         <li>
                             <a href="adminChoicePage_enrollment"><i class="fa fa-fw "><img src="resources/img/notes.png" class="im" style="height: 20px; width: 20px;"/></i> 상품 등록 </a>
+                        </li>
+                        <li>
+                            <a href="adminChoicePage_request"><i class="fa fa-fw "><img src="resources/img/upload.png" class="im" style="height: 20px; width: 20px;"/></i> 상품  등록 요청 </a>
+                        </li>
+                        <li>
+                            <a href="adminChoicePage_trash"><i class="fa fa-fw "><img src="resources/img/trash.png" class="im" style="height: 20px; width: 20px;"/></i> 휴지통 </a>
                         </li>
                         <!-- <li>
                             <a href="/"><i class="fa fa-fw "><img src="resources/img/foot.png" class="im" style="height: 20px; width: 20px;"/></i> UI Elements</a>

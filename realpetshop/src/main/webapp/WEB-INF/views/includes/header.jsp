@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<<<<<<< HEAD
 <%@taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+=======
+
+>>>>>>> refs/remotes/origin/master
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,18 +34,13 @@
         </div>
         
 <!-- login menu -->
-     	<div class="col-sm-4">
+        <div class="col-sm-4">
           <div class="login">
-          <c:if test = "${empty info}">
-              <i class="fa fa-user" id="fa"></i><div class="lo"><a href="#">Login</a></div>
-          </c:if>
-          <c:if test = "${!empty info}">
-          	<i class="fa fa-user" id="fa"></i><div class="lo"><a href="/login/logout">Logout</a></div>
-          </c:if>
-              <i class="fa fa-user-plus" id="fa"></i><div class="jo"><a href="#">Join</a></div>
-              <i class="fa fa-shopping-cart" id="fa"></i><div class="ca"><a href="#">Cart</a></div>
-              <i class="fa fa-calendar" id="fa"></i><div class="ev"><a href="#">Event</a></div>
-              <i class="fa fa-exclamation-circle" id="fa"></i><div class="no"><a href="#">Notice</a></div>
+              <i class="fa fa-user" id="fa"></i><div class="lo"><a href="/login1">로그인</a></div>
+              <i class="fa fa-user-plus" id="fa"></i><div class="jo"><a href="/SignUp">회원가입</a></div>
+              <i class="fa fa-shopping-cart" id="fa"></i><div class="ca"><a href="#">장바구니</a></div>
+              <i class="fas fa-calendar-check" id="fa"></i><div class="ev"><a href="/event">이벤트</a></div>
+              <i class="fas fa-bullhorn" id="fa"></i><div class="no"><a href="/notice">공지사항</a></div>
           </div>
         </div>
         
