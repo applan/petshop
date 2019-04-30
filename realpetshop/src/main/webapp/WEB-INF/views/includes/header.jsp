@@ -31,7 +31,7 @@
         
 <!-- login menu -->
         <div class="col-sm-4">
-          <div class="login">
+          <div class="login">	
               <i class="fa fa-user" id="fa"></i><div class="lo"><a href="/login1">로그인</a></div>
               <i class="fa fa-user-plus" id="fa"></i><div class="jo"><a href="/SignUp">회원가입</a></div>
               <i class="fa fa-shopping-cart" id="fa"></i><div class="ca"><a href="#">장바구니</a></div>
@@ -56,7 +56,6 @@
 <!-- title -->
 <!-- search -->
 <nav class="navbar">
-<<<<<<< HEAD
    <div class="title">
            <a href="/"><img src="resources/img/logo.png"/></a>
          <div class="search-box">
@@ -70,21 +69,6 @@
       
    
      
-=======
-	<div class="title">
-		  	<a href="/"><img src="resources/img/logo.png"/></a>
-	   	<div class="search-box">
-	   		<input class="search-txt" type="text" id="search" placeholder="Search . . ."/>
-	   		<a href="#" class="search-btn">
-	   			<i class="fa fa-search"></i>
-	   		</a>
-	   	</div>
-	</div>   	
-</nav>   	
-   	
-	
-	  
->>>>>>> refs/remotes/origin/master
 <!-- navbar -->
 <div id="category">
     <div class="container">
@@ -110,7 +94,6 @@
 <!-- sidebar -->
 
 <!-- <div id="sidebar">
-<<<<<<< HEAD
    <ul>
       <li><a href="/">Home 
             <span><i class="fa fa-paw"></i></span>
@@ -128,25 +111,6 @@
             <span><i class="fa fa-paw"></i></span>
          </a></li>
    </ul>
-=======
-	<ul>
-		<li><a href="/">Home 
-				<span><i class="fa fa-paw"></i></span>
-		</a></li>
-		
-		<li><a href="/event">Event 
-				<span><i class="fa fa-paw"></i></span>
-			</a></li>
-			
-		<li><a href="/notice">Notice 
-				<span><i class="fa fa-paw"></i></span>
-			</a></li>
-			
-		<li><a href="/">Q&A 
-				<span><i class="fa fa-paw"></i></span>
-			</a></li>
-	</ul>
->>>>>>> refs/remotes/origin/master
 </div> -->
 
 </header>
@@ -154,7 +118,3 @@
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/master

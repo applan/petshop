@@ -5,6 +5,45 @@
 .admin_main {
 	padding-top: 5%;
 }
+.table-box{
+ margin: 50px auto;
+ 
+}
+.table-row{
+ display: table;
+ width: 80%;
+ margin: 10px auto;
+ font-family: sans-serif;
+ background: transparent;
+ padding: 12px 0;
+ color: #555;
+ font-size 13px;
+ box-shadow: 0 1px 4px 0 rgba(0,0,50,0.3);
+}
+.table-cell{
+ display: table-cell;
+ width: 30%;
+ text-align: center;
+ padding: 4px 0;
+ border-right: 1px solid #d6d4d4;
+ vertical-align: middle;
+}
+.table-head{
+ background: #8665f7;
+ box-shadow: none;
+ color: #fff;
+ font-weight: 600;
+}
+.table .table-cell{
+  border-right: none;
+}
+.last-cell{
+   border-right: none;
+}
+.first-cell{
+  text-align: left;
+  padding-left: 10px;
+}
 </style>
 
 
@@ -17,7 +56,7 @@
 					style="height: 100px; width: 110px;"></td>
 				<td style="text-align: center; width: 200px; height: 100px;"><h2>회원
 						수</h2>
-					<h4>10명</h4></td>
+					<h4>${count_member}</h4></td>
 			</tr>
 		</table>
 		<table border="5px solid">
@@ -26,7 +65,7 @@
 					style="height: 100px; width: 110px;"></td>
 				<td style="text-align: center; width: 200px; height: 100px;"><h2>게시판
 						요청 수</h2>
-					<h4>10명</h4></td>
+					<h4>${count_request}</h4></td>
 			</tr>
 		</table>
 	</div>
@@ -46,4 +85,28 @@
 	</div>
 </div>
 
+<div class="table-box">
+<div class="table-row table-head">
+  <div class="table-cell first-cell">
+     <p>Easy Tutorials</p>
+  </div>
+  <div class="table-cell">
+     <p>Likes</p>
+  </div>
+  <div class="table-cell">
+     <p>Comments</p>
+  </div>
+</div>
+<div class="table-row">
+  <div class="table-cell first-cell">
+     <p>Digital Web</p>
+  </div>
+  <div class="table-cell">
+     <p>420</p>
+  </div>
+  <div class="table-cell last-cell">
+     <p>95</p>
+  </div>
+</div>
+</div>
 <%@include file="../includes/footer_admin.jsp"%>

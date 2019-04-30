@@ -13,6 +13,14 @@
       <property name="username" value="javaDB"/>
       <property name="password" value="12345"/>
    </bean>
+   
+   		<!-- 트랜잭션 처리 -->
+	<!-- ① 트랜잭션 매니저 등록 -->
+	<bean id="transactionManager" 
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="ds"/>
+	</bean>
+   
    <bean id="ds" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
       <constructor-arg ref="hikariConfig"/>
    </bean>	
