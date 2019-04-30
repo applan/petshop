@@ -13,6 +13,7 @@ public class ChangeVO {
 	private String confirm_password;
 	private String dog;
 	private String cat;
+	private String emailcheck;
 	private String new_email;
 	
 }

@@ -13,6 +13,7 @@ public class UserVO {
 	private String email;
 	private String cat;
 	private String dog;
+	private String emailcheck;
 	
 	public boolean ConfirmPwd (String password, String confirm_password) {
 		return password.equals(confirm_password);

@@ -29,7 +29,6 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Controller
-@RequestMapping("/login/*")
 @SessionAttributes("info")
 public class LoginController {
 
@@ -37,21 +36,10 @@ public class LoginController {
 	@Autowired
 	private UserService service;
 	
-	
-	
-	@GetMapping("/find")
-	public void find() {
-		
-	}
-	
-	@GetMapping("/index")
-	public void index() {
-		log.info("index");
-	}
-	
 	@GetMapping("/login1") 
-	  public void login() { 
-		  log.info("로그인 폼");	  
+	  public String login() { 
+		  log.info("로그인 폼");
+		  return "/login/login1";
 	  }
 	
 	
@@ -79,8 +67,10 @@ public class LoginController {
 	}
 	
 	@GetMapping("/SignUp")
-	public void signup() {
+	public String signup() {
 		log.info("가입 요청.....");
+		
+		return "/login/SignUp";
 	}
 	//중복아이디 검사 
 	//http://localhost:8083/login/checkId
@@ -142,21 +132,26 @@ public class LoginController {
 		//userid가 일치하는 회원 탈퇴
 		
 		log.info("회원 탈퇴.." +info.getUserid());
-		service.deleteMember(info);
 		
+		
+		int result = service.deleteMember(info);
+		
+		if(result>0) {
+		
+		log.info("탈퇴 :"+info.getUserid());	
 		model.addAttribute("info", info);
-		
-		log.info("탈퇴 :"+info.getUserid());
-		
 		status.setComplete();
+		}
 		return "redirect:login1";
 	}
 	
 	//LoginVO	
 	@GetMapping("/EditPersonalInformation")
-	public void EditPersonalInformation() {
+	public String EditPersonalInformation() {
 		
 		log.info("개인정보 수정...");
+		
+		return "/login/EditPersonalInformation";
 	}
 	
 	@PostMapping(value= "/EditPersonalInformation")
@@ -199,30 +194,29 @@ public class LoginController {
 }
 	
 	@GetMapping("/findfindfinduserid")
-	public void findfinduserid() {
+	public String findfinduserid() {
 		log.info("떠라제발");
-	}
-	
-	
-	
-	@GetMapping("/email")
-	public void email() {
-		log.info("드앶");
+		
+		return "/login/findfindfinduserid";
 	}
 	
 
 	
 	@GetMapping("/emailresult")
 	public String emailResult() {
-		return "/emailresult";
+		return "/login/emailresult";
 	}
 	@GetMapping("/FindID")
-	public void findid() {
+	public String findid() {
 		log.info("아이디 찾기...");
+		
+		return "/login/FindID";
 	}
 	@GetMapping("/PasswordRelivalance")
-	public void PasswordRelivalance() {
+	public String PasswordRelivalance() {
 		log.info("비밀번호를 찾아보자");
+		
+		return "/login/PasswordRelivalance";
 	}
 	
 	@PostMapping(value="/FindID")

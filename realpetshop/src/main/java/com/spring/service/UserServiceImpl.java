@@ -31,7 +31,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public UserVO deleteMember(AuthInfo info) {
+	public int deleteMember(AuthInfo info) {
 		return mapper.deleteMember(info);
 	}
 
