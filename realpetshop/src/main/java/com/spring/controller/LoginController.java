@@ -1,10 +1,13 @@
 package com.spring.controller;
 
+import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,6 +21,8 @@ import com.spring.domain.AuthInfo;
 import com.spring.domain.ChangeVO;
 import com.spring.domain.LoginVO;
 import com.spring.domain.UserVO;
+import com.spring.domain.passwordVO;
+import com.spring.service.PasswordService;
 import com.spring.service.UserService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -32,6 +37,8 @@ public class LoginController {
 	@Autowired
 	private UserService service;
 	
+	
+	
 	@GetMapping("/find")
 	public void find() {
 		
@@ -44,7 +51,7 @@ public class LoginController {
 	
 	@GetMapping("/login1") 
 	  public void login() { 
-		  log.info("로그인 폼");
+		  log.info("로그인 폼");	  
 	  }
 	
 	
@@ -121,9 +128,10 @@ public class LoginController {
 		//세션해제
 		//HttpSession : invalidate(), removeAttribute()
 		//SessionStatus : setComplete()
+		//session.invalidate();
 		status.setComplete();
 			
-		return "redirect:/login1";
+		return "redirect:login1";
 		//return "index";
 			
 	}
@@ -162,6 +170,11 @@ public class LoginController {
 		LoginVO lvo = new LoginVO();
 		lvo.setUserid(info.getUserid());
 		lvo.setCurrent_password(vo.getCurrent_password());
+		lvo.setUsername(vo.getUsername());
+		lvo.setDog(vo.getDog());
+		lvo.setCat(vo.getCat());
+		lvo.setAddr(vo.getNew_addr());
+		lvo.setEmail(vo.getNew_email());
 		
 		model.addAttribute("info", info);
 		
@@ -190,10 +203,28 @@ public class LoginController {
 		log.info("떠라제발");
 	}
 	
+	
+	
+	@GetMapping("/email")
+	public void email() {
+		log.info("드앶");
+	}
+	
+
+	
+	@GetMapping("/emailresult")
+	public String emailResult() {
+		return "/emailresult";
+	}
 	@GetMapping("/FindID")
 	public void findid() {
 		log.info("아이디 찾기...");
 	}
+	@GetMapping("/PasswordRelivalance")
+	public void PasswordRelivalance() {
+		log.info("비밀번호를 찾아보자");
+	}
+	
 	@PostMapping(value="/FindID")
 	public String useridfind(String userid,
 			Model model, RedirectAttributes rttr, UserVO vo, HttpSession session, SessionStatus status) {
@@ -202,6 +233,9 @@ public class LoginController {
 		
 		UserVO vo2 = service.useridfind(vo);
 		if(vo2!=null) {
+//			System.out.println("<script>");
+//			System.out.println("alert('vo2.getUserid()');");
+//			System.out.println("</script>");
 			rttr.addFlashAttribute("userid",vo2.getUserid());
 		}
 
@@ -210,6 +244,50 @@ public class LoginController {
 		
 	}
 	
-
-
+	@PostMapping(value="/PasswordRelivalance")
+	public String PasswordRelivalance1(String password,UserVO vo1,RedirectAttributes rttr, Model model,
+			passwordVO vo, BindingResult result) {
+		log.info("sendeamil..."+vo1.getUserid()+"ㅎㅎ"+vo1.getEmail());
+		rttr.addFlashAttribute("userid",vo1.getUserid());
+		rttr.addFlashAttribute("email",vo1.getEmail());
+		
+//		int random=0;
+//		char[] charSet = new char[] {
+//				'0','1','2','3','4','5','6','7','8','9','A','@'
+//		};
+//		StringBuffer sb = new StringBuffer();
+//		for(int i=0; i<6; i++) {
+//			random = (int)(charSet.length * Math.random());
+//			sb.append(charSet[random]);
+//		}
+		
+		int random = (int)Math.floor((Math.random()*(99999-10000+1)))+10000;
+		vo.setPassword(String.valueOf(random));
+	
+		if(vo1.getUserid().equals(vo.getUserid()) && vo1.getEmail().equals(vo.getEmail())) {
+			int vo2 = service.passwordfind(vo);
+			
+			if(vo2>0) {
+			String getRandom = Integer.toString(random);
+			getRandom = vo.getPassword();
+			log.info("getRandom"+getRandom);
+			rttr.addAttribute("getRandom",getRandom);
+			rttr.addAttribute("password",password);
+			}
+		}
+		
+		
+		PasswordService service = new PasswordService();
+		try {
+			service.PasswordRelivalance(vo);
+		} catch (AddressException e) {
+			e.printStackTrace();
+		} catch (MessagingException e) {
+			e.printStackTrace();
+			model.addAttribute("result","false");
+			return "login/emailresult";
+		};
+		model.addAttribute("result","true");
+		return "login/emailresult";
+	}
 }

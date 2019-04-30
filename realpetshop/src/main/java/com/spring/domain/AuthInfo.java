@@ -10,5 +10,6 @@ public class AuthInfo {
 	private String userid;
 	private String username;
 	private String email;
+	private String addr;
 
 }
