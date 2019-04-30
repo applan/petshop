@@ -12,5 +12,6 @@ public class LoginVO {
 	private String addr;
 	private String dog;
 	private String cat;
+	private String emailcheck;
 
 }

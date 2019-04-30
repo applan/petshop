@@ -15,7 +15,7 @@ public interface UserMapper {
 	//로그인
 	public AuthInfo selectMember(LoginVO vo);
 	//회원 탈퇴
-	public UserVO deleteMember(AuthInfo info);
+	public int deleteMember(AuthInfo info);
 	//개인정보 변경
 	public int updateMember(ChangeVO vo);
 	//아이디 찾기

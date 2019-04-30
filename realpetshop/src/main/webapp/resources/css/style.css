@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-html {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 /* @media screen and (max-width: 1280px) 
@@ -23,17 +17,11 @@ body
 }
 
 
->>>>>>> refs/remotes/origin/master
+
 body {	
 	line-height: 1.2;
     font-family: 'Roboto',sans-serif;
     margin: 0;
-<<<<<<< HEAD
-=======
->>>>>>> refs/remotes/origin/master
-
-<<<<<<< HEAD
-=======
 
 }
 
@@ -42,7 +30,6 @@ body {
 {
     width: 100%;
     text-align: center;
->>>>>>> refs/remotes/origin/master
 }
 
 /* 페이지 한 눈에 보기 쉽게 양 옆 빈 칸 조정 */
@@ -298,10 +285,9 @@ footer.page-footer .footer-copyright
 }
 
 
-=======
+
 html
 {
->>>>>>> refs/remotes/origin/master
 	scroll-behavior: smooth;
 }
 
