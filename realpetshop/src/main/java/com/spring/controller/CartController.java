@@ -61,13 +61,13 @@ public class CartController {
 	
 	
 	//장바구니 리스트 보여주기
-	@GetMapping("/cart1")
+	@GetMapping("/cart2")
 	public void listCart() {
 		log.info("listCart 보여주기..");
 	}
 	
 	
-	@PostMapping("/cart1")
+	@PostMapping("/cart2")
 	public ModelAndView listCart(ModelAndView mav,int userno) {
 		
 		Map<String, Object> map =new HashMap<String, Object>();
@@ -117,7 +117,7 @@ public class CartController {
 			vo.setGoodsnum(goodsNum[i]);
 			service.modifyCart(vo);
 		}
-		return "/cart/cart1";		
+		return "/cart/cart2";		
 	}
 	
 	
