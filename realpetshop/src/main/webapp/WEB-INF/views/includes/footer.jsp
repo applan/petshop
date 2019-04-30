@@ -25,6 +25,7 @@
                                 <div class="col-md-2 mx-auto" style="margin-left: 30px!important; margin-right: 0px!important;">
                                     <h5 class="title mb-4 mt-3 font-bold">LINKS</h5>
                                     <ul>
+<<<<<<< HEAD
 
 
                                     <li><a href="#!">Home</a></li>
@@ -33,26 +34,31 @@
                                         <li><a href="#!">Q&A</a></li>
 
 
+=======
+>>>>>>> refs/remotes/origin/master
+                                        <li><i class="fas fa-home" id="me"></i><a href="/"> Home</a></li>
+                                        <li><i class="fas fa-calendar-check" id="ck"></i><a href="/event"> Event</a></li>
+                                        <li><i class="fas fa-bullhorn" id="rn"></i><a href="/notice"> Notice</a></li>
+                                        <li><i class="fas fa-question-circle" id="le"></i><a href="/"> Q&A</a></li>
+<<<<<<< HEAD
+
+
+
+
                                         <li><i class="fas fa-home" id="me"></i><a href="/"> Home</a></li>
                                         <li><i class="fas fa-calendar-check" id="ck"></i><a href="/event"> Event</a></li>
                                         <li><i class="fas fa-bullhorn" id="rn"></i><a href="/notice"> Notice</a></li>
                                         <li><i class="fas fa-question-circle" id="le"></i><a href="/"> Q&A</a></li>
 
 
-
-
                                         <li><i class="fas fa-home" id="me"></i><a href="/"> Home</a></li>
                                         <li><i class="fas fa-calendar-check" id="ck"></i><a href="/event"> Event</a></li>
                                         <li><i class="fas fa-bullhorn" id="rn"></i><a href="/notice"> Notice</a></li>
                                         <li><i class="fas fa-question-circle" id="le"></i><a href="/"> Q&A</a></li>
 
 
-                                        <li><i class="fas fa-home" id="me"></i><a href="/"> Home</a></li>
-                                        <li><i class="fas fa-calendar-check" id="ck"></i><a href="/event"> Event</a></li>
-                                        <li><i class="fas fa-bullhorn" id="rn"></i><a href="/notice"> Notice</a></li>
-                                        <li><i class="fas fa-question-circle" id="le"></i><a href="/"> Q&A</a></li>
-
-
+=======
+>>>>>>> refs/remotes/origin/master
                                     </ul>
                                 </div>
                                 <!--/.Second column-->

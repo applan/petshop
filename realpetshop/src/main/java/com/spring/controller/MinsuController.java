@@ -17,7 +17,9 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.spring.domain.EmailVO;
 import com.spring.domain.GoodsVO;
+import com.spring.domain.GoodsVO_Trash;
 import com.spring.domain.TA_UserVO;
+import com.spring.domain.TA_UserVO_Trash;
 import com.spring.service.EmailService;
 import com.spring.service.MinsuService;
 
@@ -168,9 +170,38 @@ public class MinsuController {
     }
     
     @GetMapping("adminChoicePage_trash")
-    public String adminChoicePage_trash() {
+    public String adminChoicePage_trash(Model model) {
     	log.info("trash...");
+    	List<GoodsVO_Trash> list = minService.getList_goods_trash();
+    	List<TA_UserVO_Trash> list2 = minService.getList_member_trash();
+    	SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat ( "yyyy-MM-dd");
+    	if(!list.isEmpty()) {
+    	for(int i=0; i<list.size(); i++) {
+    		list.get(i).setPrintTrashDate(mSimpleDateFormat.format(list.get(i).getTrashDate()));
+    		list.get(i).setGoodsPriceFormat(String.format("%,d", list.get(i).getGoodsPrice()));
+    	}
+    	}
+    	if(!list2.isEmpty()) {
+    	for(int i=0; i<list.size(); i++) {
+    		list2.get(i).setPrintTrashDate(mSimpleDateFormat.format(list2.get(i).getTrashDate()));
+    	}
+    	}
+    	model.addAttribute("trash_goods_list", list);
+    	model.addAttribute("trash_member_list", list2);
+    	
     	return "management/adminChoicePage_trash";
+    }
+    
+    @GetMapping("refresh_goods")
+    public String refresh_goods(int goodsNum,Model model) {
+    	log.info("refresh_goods...");
+    	int result = minService.restore_goods(goodsNum);
+    	if(result >0) {
+    		model.addAttribute("result_restore", "true");
+    	}else {
+    		model.addAttribute("result_restore", "false");
+    	}
+    	return "management/result_Page";
     }
     
 }
