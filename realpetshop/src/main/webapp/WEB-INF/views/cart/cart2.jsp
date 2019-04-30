@@ -1,208 +1,263 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@include file="../includes/header.jsp" %>
+	pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@include file="../includes/header.jsp"%>
 <link rel="stylesheet" href="/resources/css/style.css" />
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+	integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+	crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="/resources/css/cart11.css" />
-<link rel="stylesheet" href="/resources/css/cart22.css" />
-<link rel="stylesheet" href="/resources/css/cart33.css" />
-<link rel="stylesheet" href="/resources/css/cart44.css" />
-<link rel="stylesheet" href="/resources/css/cart55.css" />
-
-<!-- 무신사 마이페이지 장바구니 -->
-
-<form name="f1">
-	<input type="hidden" name="popup" />
-	<input type="hidden" name="logged_in" value="1" />
-
-<!-- 카트 프로세스 -->
-<div class="right_contents">
-	<h2 class="title-page">Order / Payment</h2>
-	<!-- ::after 스키립트 사용할거같아 -->
-</div>
-<div class="section_container_mypage">
-<div class="section_contents" style="width:1000px; padding-left: 400px;">
-	<p class="title_s">상품 목록</p>
-	<!-- 장바구니 상품들 -->
-	
-<form action="/cart/modifyCart"name="cartform" id="cartform" method="post" >
-
-	<table class="table_basic cart_table">
-	<colgroup>
-		<col width="5%"/>
-		<col width="4%"/>
-		<col width="20%"/>
-		<col width="5%"/>
-		<col width="8%"/>
-		<col width="16%"/>
-		<col width="7%"/>
-		<col width="9%"/>
-		<col width="12%"/>
-	</colgroup>
-	<thead>
-		<tr>
-			<th scope="col">번호</th>
-			<th scope="col" style="cursor:pointer;"><input type="checkbox" class="chk_all" checked /></th>
-			<th scope="col">상품명</th>
-			<th scope="col">판매가</th>
-			<th scope="col">회원 할인</th>
-			<th scope="col">수량</th>
-			<th scope="col">"주문금액"</th>
-			<th scope="col">주문관리</th>
-			<th scope="col">배송비/배송 형태</th>
-		</tr>
-	</thead>
-	<tbody>
-		<c:forEach var="row" items="${map.list}" varStatus="i">
-		<tr>
-			<td>
-				<input type="hidden" name="no" value=""/>
-				<input type="hidden" name="cart_info" value=""/>
-				<input type="hidden" name="sale_yn" value=""/>
-				<input type="hidden" name="good_qty" value=""/>
-			</td>
-			<td>
-				<input type="checkbox" name="cart_no" value="" checked="checked" />
-			</td>
-			<td>
-				<div class="connect_img">
-					<a href="#">
-						<img src="resources/img/logo.png" alt="" width="80" height="88"/>
-						<span class="vertical_standard"></span>
-					</a>
+<div class="container">
+	<div id="contents">
+		<!-- 본문 시작 -->
+		<div class="cartform">
+			<div class="location_wrap">
+				<div class="location_cont">
+					<em><a href="#" class="local_home">HOME</a> &gt; 장바구니</em>
 				</div>
-				<div class="article_info connect_info">
-					<p class="list_brand">"
-									브랜드 명 넣어야해																																																																							
-									"</p>
-					<p class="list_info">
-						<a href="#">
-							민수 팀장님 죄송합니다..
-							상품 이름 넣는 곳
-						</a>
-					</p>
-					<p class="txt_option">
-						옵션:로고/&nbsp;하나 더 만들자 <- 이런거
-					</p>
+			</div>
+			<!-- //location_wrap -->
+
+			<div class="sub_content">
+				<!-- //side_cont -->
+				<div class="content_box">
+					<div class="order_wrap">
+						<div class="border-line"></div>
+						<div class="order_tit">
+							<p>장바구니</p>
+							<ol>
+								<li class="page_on"><span>01 </span>장바구니 <i
+									class="fas fa-chevron-right"></i> <span><img src="#"
+										alt=""></span></li>
+								<li class="page_next"><span>02 </span>주문서작성/결제 <i
+									class="fas fa-chevron-right"></i> <span><img src="#"
+										alt=""></span></li>
+								<li class="page_next"><span>03 </span>주문완료 <i
+									class="fas fa-chevron-right"></i></li>
+							</ol>
+						</div>
+						<!-- //order_tit -->
+
+						<div class="cart_cont">
+
+							<form id="frmCart" name="frmCart" method="post"
+								target="ifrmProcess">
+								<input type="hidden" name="mode" value=""> <input
+									type="hidden" name="cart[cartSno]" value=""> <input
+									type="hidden" name="cart[goodsNo]" value=""> <input
+									type="hidden" name="cart[goodsCnt]" value=""> <input
+									type="hidden" name="cart[addGoodsNo]" value=""> <input
+									type="hidden" name="cart[addGoodsCnt]" value=""> <input
+									type="hidden" name="cart[couponApplyNo]" value=""> <input
+									type="hidden" name="useBundleGoods" value="1">
+								<!-- 장바구니 상품리스트 시작 -->
+
+								<div class="cart_cont_list">
+									<div class="order_cart_tit"></div>
+									<!-- //order_cart_tit -->
+
+									<div class="order_table_type">
+										<span style="display: none;" name="wp_detection" tag="i">16771</span>
+										<div class="groobeeProductList" style="display: none">
+											<a href="#" class="groobeeProductA"></a> <span
+												class="groobeeProductName">[1+1증정]스튜어트 동결건조 닭가슴살 파우치
+												85g</span> <span class="groobeeProductCategory">053001004</span> <span
+												class="groobeeProductCount">1</span> <span
+												class="groobeeProductImage"><img src="#" width="40"
+												alt="[1+1증정]스튜어트 동결건조 닭가슴살 파우치 85g"
+												title="[1+1증정]스튜어트 동결건조 닭가슴살 파우치 85g" class="middle"></span>
+											<span class="groobeeProductPrice">24,000원</span>
+										</div>
+										<table>
+											<colgroup>
+												<col style="width: 3%">
+												<!-- 체크박스 -->
+												<col>
+												<!-- 상품명/옵션 -->
+												<col style="width: 10%">
+												<!-- 수량 -->
+												<col style="width: 10%">
+												<!-- 상품금액 -->
+												<col style="width: 13%">
+												<!-- 합계금액 -->
+												<col style="width: 10%">
+											</colgroup>
+											<thead>
+												<tr>
+													<th>
+														<div class="form_element">
+															<input type="checkbox" id="allCheck1"
+																class="gd_select_all_goods" data-target-id="cartSno1_"
+																data-target-form="#frmCart" checked="checked"> <label
+																for="allCheck1" class="check_s on"></label>
+														</div>
+													</th>
+													<th>상품/옵션 정보</th>
+													<th>수량</th>
+													<th>상품금액</th>
+													<th>합계금액</th>
+												</tr>
+											</thead>
+											<tbody>
+
+
+												<!-- WIDERPLANET CART SCRIPT START 2019.2.15 -->
+
+												<script type="text/javascript">
+													var wp_page_type = 'Cart';
+												</script>
+												<!-- // WIDERPLANET CART SCRIPT END 2019.2.15 -->
+
+
+												<!-- Groobee Order & Cart Selector Script -->
+
+												<!-- End of Groobee Order & Cart Selector Script -->
+
+
+												<tr>
+													<td class="td_chk">
+														<div class="form_element">
+															<input type="checkbox" id="cartSno1_11019"
+																name="cartSno[]" value="11019" checked="checked"
+																data-price="24000" data-mileage="0" data-goodsdc="0"
+																data-memberdc="0" data-coupondc="0" data-possible="y"
+																data-goods-key="0" data-goods-no="16771"
+																data-goods-nm="[1+1증정]스튜어트 동결건조 닭가슴살 파우치 85g"
+																data-option-nm="" data-fixed-sales="option"
+																data-sales-unit="1" data-fixed-order-cnt="option"
+																data-min-order-cnt="1" data-max-order-cnt="0"
+																data-default-goods-cnt="1"> <label
+																for="cartSno1_11019" class="check_s on"></label>
+														</div>
+													</td>
+													<td class="td_left">
+														<div class="pick_add_cont">
+															<span class="pick_add_img"><a href="#"><img
+																	src="#" width="40" alt="[1+1증정]스튜어트 동결건조 닭가슴살 파우치 85g"
+																	title="[1+1증정]스튜어트 동결건조 닭가슴살 파우치 85g" class="middle"></a>
+															</span>
+															<div class="pick_add_info">
+
+																<div style="font-size: 13px; color: #00891A;"></div>
+
+
+																<!-- //icon_pick_list -->
+
+																<div class="pick_option_box"></div>
+
+																<div class="pick_option_box"></div>
+															</div>
+														</div> <!-- //pick_add_cont --> <!-- //pick_add_list -->
+
+													</td>
+													<td class="td_order_amount">
+														<div class="product-quantity">
+															<input type="number" value="1" min="1">
+														</div>
+													</td>
+													<td style="padding-top: 30px;"><strong
+														class="order_sum_txt price">24,000원</strong>
+														<p class="add_currency"></p></td>
+													<td class="td_benefit">
+														<ul class="benefit_list">
+														</ul>
+													</td>
+												</tr>
+
+											</tbody>
+
+
+										</table>
+									</div>
+
+								</div>
+								<!-- //cart_cont_list -->
+								<!-- 장바구니 상품리스트 끝 -->
+
+
+							</form>
+
+
+							<div class="price_sum" style="font-size: 25px;">
+								<div class="price_sum_cont">
+									<div class="price_sum_list">
+										<dl>
+											<dt>
+												총 <strong id="totalGoodsCnt">1</strong> 개의 상품금액
+											</dt>
+											<dd>
+												<strong id="totalGoodsPrice">24,000</strong>원
+											</dd>
+										</dl>
+										<dl style="padding: 0 0">
+											<dt>
+												<i class="fas fa-plus-circle"></i>
+											</dt>
+										</dl>
+										<dl>
+											<dt>배송비</dt>
+											<dd>
+												<strong id="totalDeliveryCharge">2,500</strong>원
+											</dd>
+										</dl>
+										<dl style="padding: 0 0">
+											<dd>
+												<i class="fas fa-equals"></i>
+											</dd>
+										</dl>
+										<dl class="price_total">
+											<dt>합계</dt>
+										</dl>
+									</div>
+									<em id="deliveryChargeText" class="tobe_mileage"></em>
+								</div>
+								<!-- //price_sum_cont -->
+							</div>
+							<div class="btn_left_box">
+								<a href="/" class="shop_go_link"><em>&lt; 쇼핑 계속하기</em></a>
+							</div>
+							<!-- //price_sum -->
+
+							<div class="btn_order_box">
+								<div class="row no-gutters">
+									<div class="col-4 btn_left_box">
+										<button type="button"
+											class="btn btn-primary btn-lg gradient btn_order_choice_del"
+											onclick="gd_cart_process('cartDelete');">선택 상품 삭제</button>
+										<button type="button"
+											class="btn btn-primary btn-lg gradient btn_order_choice_wish"
+											onclick="gd_cart_process('cartToWish');">선택 상품 찜</button>
+									</div>
+									<div class="col-4"></div>
+
+									<div class="col-4 btn_right_box text-right">
+										<button type="button"
+											class="btn btn-danger btn-lg gradient btn_order_choice_buy"
+											onclick="gd_cart_process('orderSelect');">선택 상품 주문</button>
+										<button type="button"
+											class="btn btn-danger btn-lg gradient btn_order_whole_buy"
+											onclick="gd_order_all();">전체 상품 주문</button>
+									</div>
+								</div>
+							</div>
+							<!-- //btn_order_box -->
+						</div>
+						<!-- //cart_cont -->
+					</div>
+					<!-- //order_wrap -->
 				</div>
-			</td>
-			<td>
-				<p class="td_price">
-					<span class="txt_origin_price">가격 35,000</span>
-				</p>
-			</td>
-			<td>
-				회원 할인
-			</td>
-			<td> <!-- 상품 수량 -->
-				<input type="hidden" name="limited_qty_yn_295250164" value=""/>
-				<input type="hidden" name="limited_min_qty_295250164" value="1"/>
-				<input type="hidden" name="limited_max_qty_295250164" value="999"/>
-				<div class="add" style="box-sizing: unset;">
-					<p>
-						<input type="text" name="cart_qty" class="input_add" onkeyup="checkQty(this);" onfocus="this.select();" value="1" />
-		
-					</p>
-					<!-- javascript:void(0) a태그 없애면서 형태는 살리는 방식 -->
-					<p class="btn_add">
-						<a href="javascript:void(0)" onclick="Cart.increaseQtyByNo('295250164','input[name=\'cart_qty\']:eq(0)');return false;">+</a>
-					</p>
-					<p class="btn_add">
-						<a href="javascript:void(0)" class="last" 
-						onclick="Cart.decreaseQtyByNo('295250164','input[name=\'cart_qty\']:eq(0)');return false;">-</a>
-					</p>
-					<p>
-						<a href="javascript:void(0)" class="plain-btn btn cart_amount"
-						onclick="Cart.setQtyByNo('295250164','input[name=\'cart_qty\']:eq(0)'); return false;"
-						>수정</a>
-					</p>
-					<!-- ::after 스크립트에서 쓸꺼같아-->
-				</div>
-			</td>
-			<td>
-				주문 가격 35,000
-			</td>
-			<td>
-				<a href="javascript:void(0)" class="plain-btn btn"
-				onclick="Cart.deleteCart('295250164'); return false;">
-				삭제하기</a>
-			</td>
-			<td>
-				<strong>배송비 무료</strong>
-			</td>
-		</tr>
-	</c:forEach>
-
-	
-	</tbody>
-	
-   </table>
-</form>
-	<!-- 장바구니 구입 -->
-	<div class="delete-btn-area">
-		<a href="javascript:void(0)" id="del_soldout" class="click_disalbe"
-		onclick="Cart.deleteSoldout('cart'); return false;">품절삭제</a>
-		<a href="javascript:void(0)" id="del_chk" class="selectdelete"
-		onclick="Cart.deleteSelect('cart'); return false;">선택해제</a>
-	</div>
-	<div class="box-explain-cart">
-		<ul class="g-list-explain">
-			<li>구매 가능 수량이 1개로 제한된 상품은 주문 취소 시, 24시간 내 가상계좌 재주문이 불가합니다.</li>
-			<li>민수 펫숍은 기본적으로 전 상품 무료 배송입니다.</li>
-			<li>해외배송 상품은 배송 불가능 하므로 해외 상품은 없습니다.</li>
-			<li>2개 이상 브랜드를 주문하신 경우, 각각 개별 배송됩니다.</li>
-			<li>장바구니에 담은 시점과 현재의 판매 가격이 달라질 수 있습니다.</li>
-			<li>민수네 펫샵은 멋진 샵이므로 할인이란 존재 하지 않습니다.</li>
-			<li>수량 제한 상품의 경우, 가상계좌를 통한 주문은 최대 2건까지만 가능합니다.(미입금 주문 기준, 기존 주문 합산)</li>
-		</ul>
-	</div>
-	
-	<!-- 장바구니 버튼 -->
-</div>
-	<div class="section_contents">
-		<ul class="final_payment" style="padding-left: 700px;">
-			<li class="payment_list">
-				<p class="title">판매 가격</p>
-				<p class="box_amount_payment">
-					<span id="total_prd_amt" class="payment_amount">가격 넣어야해</span>
-					원
-				</p>
-			</li>
-			<li class="plus_bg">
-				<p class="title">배송비</p>
-				<p class="box_amount_payment">
-				<span id="div_amt" class="payment_amount">0</span>
-				원
-				</p>
-			</li>
-			<li>
-				<br>
-				<p></p>
-				<img src="resources/img/meth1.png" style="width:30px; height:20px;"/>
-			</li>
-			<li class="equal_bg" style="padding-left:0px;">
-				<p class="title">최종 결제금액</p>
-				<p class="box_amount_payment">
-				<span id="pay_amt" class="payment_amount">가격 넣어야징</span>
-				원
-				<span class="payment_off">
-					<span id="total_dc_rate">0</span>
-					"% OFF"
-				</span>
-				</p>
-			</li>
-		</ul>
-	</div>
-	<div class="m-btn-set cart_btn">
-		<a href="javascript:void(0)" class="m-btn btn-accent"
-		onclick="Cart.selectOrder(); return false;">주문하기</a>
+				<!-- //content_box -->
+			</div>
+			<!-- //sub_content -->
+		</div>
+		<!-- //본문 끝 contents -->
 	</div>
 </div>
-</form>
 
 
-<%@include file="../includes/footer.jsp" %>
+<%@include file="../includes/footer.jsp"%>
 
 
 
