@@ -54,6 +54,13 @@
 		<div class="col-1 col-sm-4"></div>
 	</div>
 </div>
+<<<<<<< HEAD
+</div>
+</div>
+<%@include file="../includes/footer.jsp" %>
+<script src="/resources/js/jquery.validate.js"></script>
+<script src="/resources/js/passwordRelivalance.js"></script>
+=======
 <!-- <script type="text/javascript">
     $(document).ready(function () {
         $('input').keyup(function () {
@@ -101,4 +108,5 @@
 <%@include file="../includes/footer.jsp"%>
 
 
+>>>>>>> refs/remotes/origin/master
 

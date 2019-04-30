@@ -10,6 +10,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
+<<<<<<< HEAD
+<div style="background-color:white;">
+
+=======
+>>>>>>> refs/remotes/origin/master
 <div class="container">
 	<!-- <div><img src="resources/img/logo.png" style="width:300px; margin-left: 380px;"/></div> -->
 
@@ -93,7 +98,13 @@
 		</div>
 	</form>
 </div>
+<<<<<<< HEAD
+</div>
+<%@include file="../includes/footer.jsp" %>
+<!-- <script src="/resources/js/jquery.jquery-3.3.1.js"></script> -->
+=======
 
 <%@include file="../includes/footer.jsp"%>
+>>>>>>> refs/remotes/origin/master
 <script src="/resources/js/jquery.validate.js"></script>
 <script src="/resources/js/signup.js"></script>
