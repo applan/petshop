@@ -3,9 +3,9 @@ create table test_goods(
  goodsName nvarchar2(40) not null,
  goodsId nvarchar2(40) not null,
  goodsMainUrl nvarchar2(2000) not null,
- goodsUrl nvarchar2(2000),
+ goodsUrl nvarchar2(2000) ,
  goodsDate date DEFAULT sysdate,
- goodsInfo nvarchar2(200),
+ goodsInfo nvarchar2(200) ,
  goodsPrice number not null
 );
 create table test_goods_trash(
@@ -13,11 +13,12 @@ create table test_goods_trash(
  goodsName nvarchar2(40) not null,
  goodsId nvarchar2(40) not null,
  goodsMainUrl nvarchar2(2000) not null,
- goodsUrl nvarchar2(2000),
+ goodsUrl nvarchar2(2000) ,
  goodsDate date DEFAULT sysdate,
- goodsInfo nvarchar2(200),
+ goodsInfo nvarchar2(200) ,
  goodsPrice number not null,
- trashDate date default sysdate
+ trashDate date default sysdate,
+ printTrashDate nvarchar2(10)
 );
 drop table test_goods_trash;
 insert into test_goods_trash(goodsNum, goodsName, goodsId, goodsMainUrl, goodsUrl, goodsDate, goodsInfo, goodsPrice)
@@ -31,14 +32,15 @@ values(1,
 100000000
 );
 
+drop table test_goods_trash;
 create table test_request_goods(
  goodsNum number(10) primary key,
  goodsName nvarchar2(40) not null,
  goodsId nvarchar2(40) not null,
  goodsMainUrl nvarchar2(2000) not null,
- goodsUrl nvarchar2(2000),
+ goodsUrl nvarchar2(2000) ,
  goodsDate date DEFAULT sysdate,
- goodsInfo nvarchar2(200),
+ goodsInfo nvarchar2(200) ,
  goodsPrice number not null
 );
 
@@ -82,7 +84,8 @@ create table test_user_trashData(
  userId nvarchar2(40) not null,
  userName nvarchar2(40) not null,
  usercheck char not null,
- trashDate date default sysdate
+ trashDate date default sysdate,
+ printTrashDate nvarchar2(10)
 );
 
 drop table test_user_trashData;
@@ -91,5 +94,5 @@ create sequence userNum_sq;
 
 
 insert into test_user values(
-userNum_sq.nextVal, 'cms4861', '최민수',0
+userNum_sq.nextVal, 'cms4861', '최민수',1
 );

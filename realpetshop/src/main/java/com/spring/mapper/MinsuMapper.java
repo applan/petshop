@@ -3,7 +3,9 @@ package com.spring.mapper;
 import java.util.List;
 
 import com.spring.domain.GoodsVO;
+import com.spring.domain.GoodsVO_Trash;
 import com.spring.domain.TA_UserVO;
+import com.spring.domain.TA_UserVO_Trash;
 
 public interface MinsuMapper {
 
@@ -22,4 +24,11 @@ public interface MinsuMapper {
 	public GoodsVO getGood(int goodsNum);
 	public TA_UserVO getMember(int userNum);
 	public int insertTrash_members(TA_UserVO vo);
+	public List<GoodsVO_Trash> getList_goods_trash();
+	public List<TA_UserVO_Trash> getList_member_trash(); 
+	public int permanently_Delete_member(int userNum);
+	public int permanently_Delete_goods(int goodsNum);
+	public TA_UserVO_Trash getMember_Trash(int userNum);
+	public GoodsVO_Trash getGoods_Trash(int goodsNum);
+	public int Reinsert_goods(GoodsVO vo);
 }

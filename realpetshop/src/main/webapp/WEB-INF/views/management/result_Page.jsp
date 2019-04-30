@@ -67,6 +67,19 @@
 		location.href="/adminChoicePage_member";
 	}
 	
+	// 물건 복원 후 넘어오는 결과
+	var res5 = "${result_restore}";
+	if(res5 === "true"){
+		alert("상품 정보 복원 성공");
+		res5 = "";
+		location.href="/adminChoicePage_delete";
+	}
+	if(res5 === "false"){
+		alert("상품 정보 복원 실패");
+		res5 = "";
+		location.href="/adminChoicePage_delete";
+	}
+	
 });
 </script>
 </body>
