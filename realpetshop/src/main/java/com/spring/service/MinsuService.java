@@ -27,5 +27,5 @@ public interface MinsuService {
 	public int restore_member(int userno); // 쓰래기통 속 유저 정보 복원
 	public int restore_goods(int goodsNum); // 쓰래기통 속 상품 정보 복원 
 	public int modify_authority(UserChangeVO vo); // 유저 권한 변경 
-
+    public GoodsVO getGood(int goodsNum); // goodsNum을 이용해 상품 가져오기
 }

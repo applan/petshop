@@ -36,6 +36,7 @@
 		  <td>${list.goodsId}</td>
 		  <td>${list.goodsDate}</td>
 		  <td class="t"><a href="/adminChoicePage_trash?goodNum=${list.goodsNum}"><img src="resources/img/icon_info.png" class="checkimg_in" role="${list.goodsNum}"/></a></td>
+		  <td class="t"><a href="/delete?goodNum=${list.goodsNum}"><img src="resources/img/delete.png" class="checkimg_in" role="${list.goodsNum}"/></a></td>
 		</tr>
 		</c:forEach>
   </tbody>

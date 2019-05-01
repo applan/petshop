@@ -143,6 +143,11 @@ public class MinsuServiceImpl implements MinsuService {
 		return mapper.getMember(userno);
 	}
 
+	@Override
+	public GoodsVO getGood(int goodsNum) {
+		return mapper.getGood(goodsNum);
+	}
+
 
 
 

@@ -65,6 +65,15 @@ public class CartController {
 	public void listCart() {
 		log.info("listCart 보여주기..");
 	}
+	//장바구니 리스트 보여주기
+	@GetMapping("/cart3")
+	public String listCart3(int goodsNum) {
+		log.info("listCart 보여주기..으아아암나안망"+goodsNum);
+		// db 
+		
+		return "redirect:/cart/cart2";
+		
+	}
 	
 	
 	@PostMapping("/cart2")
