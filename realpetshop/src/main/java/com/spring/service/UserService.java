@@ -5,6 +5,7 @@ import com.spring.domain.ChangeVO;
 import com.spring.domain.LoginVO;
 import com.spring.domain.UserVO;
 import com.spring.domain.passwordVO;
+import com.spring.domain.sessionVO;
 
 public interface UserService {
 	public UserVO selectById(String userid);
@@ -14,6 +15,7 @@ public interface UserService {
 	public int updateMember(ChangeVO vo);
 	public UserVO useridfind(UserVO vo);
 	public int passwordfind(passwordVO vo);
-
+	
+	public AuthInfo edit(sessionVO vo5);
 }
 

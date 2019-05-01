@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@include file="../includes/header.jsp"%>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 	integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
@@ -20,18 +20,19 @@
 			<div class="text-center">
 				<!-- 본문 시작 : start -->
 				<!-- <img src="/resources/img/logo.png" style="width: 300px; margin-left: 130px;" /> -->
-				<form class="formFindId" id="formFindId" action="">
+				<form class="formFindId" id="formFindId" method="post" action="/findfindfinduserid">
 					<!-- method="post" novalidate="novalidate"-->
 					<p class="p">
 						<i class="fas fa-dog"></i>
 					</p>
 					<label for="username" class="sr-only"></label> <input type="text"
-						id="username" class="form-control" placeholder="이름" required
+						id="username" name="username" class="form-control" placeholder="이름" required
 						autofocus> <label for="email" class="sr-only"></label> <input
-						type="email" id="email" class="form-control"
+						type="email" id="email" name="email" class="form-control"
 						placeholder="가입한 이메일 주소" required>
-					<button type="button"
-						class="btn btn-primary btn-block btn-lg gradient" type="submit">아이디찾기</button>
+					<button type="submit"
+						class="btn btn-primary btn-block btn-lg gradient findidd" id="findid" 
+						value="${userid }">아이디찾기</button>
 
 
 
@@ -49,7 +50,17 @@
 		</div>
 		<div class="col-1 col-sm-4"></div>
 	</div>
-<!-- 본문 끝 : end -->
+<!-- <script>
+	$(function(){
+		$(".findidd").click(function(e){
+			e.preventDefault();
+			
+			var useridfind = $(this).attr("role");
+			var url = "findfindfinduserid?username:email="+useridfind;
+			window.open(url, "Pet Shop", "width=100, height=100, toolbar=no, menuber=no, scrollbars=no, resizable=yes");
+		})
+	})
+</script> -->
 <%@include file="../includes/footer.jsp"%>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="/resources/js/jquery.validate.js"></script>

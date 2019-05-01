@@ -6,6 +6,7 @@ import com.spring.domain.ChangeVO;
 import com.spring.domain.LoginVO;
 import com.spring.domain.UserVO;
 import com.spring.domain.passwordVO;
+import com.spring.domain.sessionVO;
 
 public interface UserMapper {
 	//중복아이디 찾기
@@ -23,7 +24,7 @@ public interface UserMapper {
 	//비밀번호 찾기
 	public int passwordfind(passwordVO vo);
 
-
+	public AuthInfo edit(sessionVO vo5);
 	
 
 }

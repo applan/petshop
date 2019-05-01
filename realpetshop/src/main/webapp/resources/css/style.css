@@ -1849,67 +1849,6 @@ footer.page-footer .footer-copyright {
 }
 
 @media ( max-width : 991px) {
-<<<<<<< HEAD
-	.event-page {
-		height: 100%;
-		background-position: center;
-	}
-	.event-page .leftBox {
-		width: 100%;
-		height: auto;
-		float: none;
-		padding: 20px;
-	}
-	.events {
-		position: relative;
-		width: 100%;
-		height: 100%;
-		background: transparent;
-		float: none;
-	}
-	.event-page .leftBox .content {
-		padding: 20px;
-	}
-	.event-page .leftBox .content h1 {
-		font-size: 30px;
-	}
-	.events ul {
-		position: relative;
-		transform: translateY(0px);
-		padding: 0 20px 20px;
-	}
-	.events ul li {
-		height: auto;
-		background: #FCE4BD;
-		border-radius: 40px;
-	}
-	.events ul li .time {
-		width: 80px;
-		height: 80px;
-		padding: 0;
-		border-radius: 40px;
-	}
-	.events ul li .time h2 {
-		font-size: 30px;
-		line-height: 24px;
-	}
-	.events ul li .time h2 span {
-		font-size: 20px;
-		
-	}
-	.events ul li details {
-		width: 100%;
-		float: none;
-		padding-left: 100px;
-		background: transparent;
-	}
-	.events ul li details a {
-		padding: 5px 10px;
-	}
-	.details {
-		background: #FCE4BD;
-	}
-=======
    .event-page {
       height: 100%;
       background-position: center;
@@ -1969,7 +1908,6 @@ footer.page-footer .footer-copyright {
    .details {
       background: #FCE4BD;
    }
->>>>>>> refs/remotes/origin/master
 }
 /*///////////////////////////// event 종료////////////////////////////////*/
 

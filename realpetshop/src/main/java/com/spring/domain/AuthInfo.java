@@ -8,6 +8,7 @@ public class AuthInfo {
 	//userno 추가
 	private int userno;
 	private String userid;
+	private String current_password;
 	private String username;
 	private String email;
 	private String addr;
@@ -15,5 +16,4 @@ public class AuthInfo {
 	private String cat;
 	private String dog;
 	private String emailcheck;
-
 }

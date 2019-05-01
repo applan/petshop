@@ -24,9 +24,12 @@
 						<i class="fas fa-user-circle"></i>
 					</p>
 					<label for="userid" class="sr-only"></label> <input type="text"
-						id="userid" name="userid" class="form-control" placeholder="아이디" required	autofocus> <label for="password" class="sr-only"></label>
+						id="userid" name="userid" class="form-control" placeholder="아이디" required	autofocus> 
+						<label for="password" class="sr-only"></label>
 					<input type="password" id="password" name="current_password" class="form-control"
 						placeholder="패스워드" required>
+
+
 
 					<button type="submit"
 						class="btn btn-primary btn-block btn-lg gradient">로그인
