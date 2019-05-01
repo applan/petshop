@@ -8,9 +8,9 @@
 </select>
 
 <insert id="registMember">
-		insert into pet_user(userno,userid,password,username,addr,email,cat,dog,emailcheck,num)
+		insert into pet_user(userno,userid,password,username,addr,email,cat,dog,emailcheck)
 		values(rno_seq.nextVal,#{userid},#{password},#{username},#{addr},#{email},
-		#{cat,jdbcType=VARCHAR},#{dog,jdbcType=VARCHAR},#{emailcheck,jdbcType=VARCHAR},#{num})
+		#{cat,jdbcType=VARCHAR},#{dog,jdbcType=VARCHAR},#{emailcheck,jdbcType=VARCHAR})
 </insert>
 
 <!-- 회원 로그인  -->
@@ -27,7 +27,7 @@
 <!--비밀번호 바꾸기  -->
 <update id ="updateMember">
 	update pet_user set password=#{new_password}, addr=#{new_addr}, email=#{new_email}, 
-	dog=#{dog,jdbcType=VARCHAR}, cat=#{cat,jdbcType=VARCHAR} 
+	dog=#{dog,jdbcType=VARCHAR}, cat=#{cat,jdbcType=VARCHAR}, emailcheck=#{emailcheckjdbcType=VARCHAR}
 	where  userid =#{userid} and username=#{username}
 </update>
 <!-- 비밀번호 찾기 -->
@@ -36,7 +36,9 @@
 </update>
 <!-- 아이디 찾기 -->
 <select id="useridfind" resultType="com.spring.domain.UserVO">
-	select userid from pet_user where username=#{username} and email=#{email}
+	select userid, username from pet_user where username=#{username} and email=#{email}
 </select>
-
+<select id="edit" resultType="com.spring.domain.AuthInfo">
+	select userid, username, addr, cat, dog, email, emailcheck from pet_user where userno=#{userno} and num=#{num}
+</select>
 </mapper>

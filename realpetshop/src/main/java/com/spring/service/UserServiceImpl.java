@@ -12,6 +12,7 @@ import com.spring.domain.ChangeVO;
 import com.spring.domain.LoginVO;
 import com.spring.domain.UserVO;
 import com.spring.domain.passwordVO;
+import com.spring.domain.sessionVO;
 import com.spring.mapper.UserMapper;
 
 import lombok.extern.slf4j.Slf4j;
@@ -51,14 +52,17 @@ public class UserServiceImpl implements UserService {
 	
 	@Override
 	public AuthInfo selectMember(LoginVO vo) {
-		
-		
 		return mapper.selectMember(vo);
 	}
 
 	@Override
 	public UserVO useridfind(UserVO vo) {
 		return mapper.useridfind(vo);
+	}
+
+	@Override
+	public AuthInfo edit(sessionVO vo5) {
+		return mapper.edit(vo5);
 	}
 
 
