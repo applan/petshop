@@ -37,11 +37,11 @@ public class PasswordService {
 
 
         MimeMessage message = new MimeMessage(session);
-        message.setSubject("<h1>"+"임시 비밀번호가 발급되었습니다."+"</h1>");
+        message.setSubject("임시 비밀번호가 발급되었습니다.");
         message.setFrom(new InternetAddress(user));
-        message.setContent("<h1>"+"임시 비밀번호가 발급되었습니다."
-        		+"<br>"+ "로그인 이후에 비밀번호를 바꿔주세요"+"</h1>" 
-                + vo.getPassword(),
+        message.setContent("<h1>"+"임시 비밀번호 5자리가 발급되었습니다."
+        		+"<br>"+ "로그인 이후에 '반드시' 비밀번호를 바꿔주세요"+"</h1>"
+                +"<br>"+"<h2>"+ vo.getPassword()+"</h2>",
                 "text/html;charset=UTF-8");
         message.addRecipient(Message.RecipientType.TO,
              new InternetAddress(vo.getEmail()));
